@@ -3,6 +3,7 @@ version: '3'
 services:
 
   homer:
+    container_name: homer
     image: "b4bz/homer:latest"
     ports:
       - "8080:8080"
@@ -11,6 +12,7 @@ services:
     restart: always
   
   portainer:
+    container_name: portainer
     image: "portainer/portainer-ce:latest"
     ports:
       - "9000:9000/tcp"
