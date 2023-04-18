@@ -74,7 +74,7 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
     devices:
-      - /dev/kmsg
+      - /dev/kmsg:/dev/kmsg
     restart: unless-stopped
     privileged: true
 
