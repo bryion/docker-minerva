@@ -3,25 +3,29 @@ version: '3'
 services:
 
   homer:
-    image: 'b4bz/homer:latest'
+    image: "b4bz/homer:latest"
     ports:
-      - '8080:8080'
+      - "8080:8080"
     volumes:
       - '/opt/homer:/www/assets'
     restart: always
   
   portainer:
-    image: portainer/portainer-ce:latest
+    image: "portainer/portainer-ce:latest"
     ports:
-      - 9443:9443
+      - "9000:9000/tcp"
     volumes:
       - /opt/portainer:/data
       - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - TZ=America/Los_Angeles
     restart: unless-stopped
 
   homeassistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
+    ports:
+      - "8123:8123"
     volumes:
       - /opt/hass:/config
       - /etc/localtime:/etc/localtime:ro
