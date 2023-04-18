@@ -8,14 +8,14 @@ volumes:
 
 services:
 
-  homer:
-    container_name: homer
-    image: "b4bz/homer:latest"
-    ports:
-      - "8080:8080"
-    volumes:
-      - '/opt/homer:/www/assets'
-    restart: always
+  #homer:
+  #  container_name: homer
+  #  image: "b4bz/homer:latest"
+  #  ports:
+  #    - "8080:8080"
+  #  volumes:
+  #    - '/opt/homer:/www/assets'
+  #  restart: always
   
   portainer:
     container_name: portainer
