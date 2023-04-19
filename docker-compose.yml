@@ -61,8 +61,7 @@ services:
       - '/:/host:ro,rslave'
 
   cadvisor:
-    # TODO: latest tag is not updated, check latest release https://github.com/google/cadvisor/releases 
-    image: gcr.io/cadvisor/cadvisor:v0.47.0     
+    image: gcr.io/cadvisor/cadvisor:latest
     container_name: cadvisor
     ports:
       - "8080:8080"
@@ -77,6 +76,14 @@ services:
       - /dev/kmsg:/dev/kmsg
     restart: unless-stopped
     privileged: true
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - 6379:6379
 
   homeassistant:
     container_name: homeassistant
