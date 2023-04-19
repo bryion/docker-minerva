@@ -62,7 +62,7 @@ services:
 
   cadvisor:
     # find latest version of cadvisor
-    image: gcr.io/cadvisor/cadvisor:v0.47.0
+    image: gcr.io/cadvisor/cadvisor:v0.46.0
     container_name: cadvisor
     ports:
       - "8080:8080"
