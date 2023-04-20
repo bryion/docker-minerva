@@ -2,6 +2,10 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/en/configs/widgets
 
+- greeting:
+    text_size: xl
+    text: " Minerva"
+
 - resources:
     cpu: true
     cputemp: true
