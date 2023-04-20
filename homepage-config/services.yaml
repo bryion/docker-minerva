@@ -7,11 +7,11 @@
         icon: portainer
         href: http://192.168.1.19:9000
         ping: http://192.168.1.19:9000
-        widget:
-            type: portainer
-            url: https://192.168.1.19:9000
-            env: 2
-            key: ptr_KAByiGDWqPAPHzrp97T5ZsID6PnN1EvNPwCDnugyvCk=
+#        widget:
+#            type: portainer
+#            url: https://192.168.1.19:9000
+#            env: 2
+#            key: ptr_KAByiGDWqPAPHzrp97T5ZsID6PnN1EvNPwCDnugyvCk=
     - Grafana: 
         icon: grafana
         href: http://192.168.1.19:3000
