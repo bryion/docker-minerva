@@ -7,10 +7,10 @@ base: http://192.168.1.19:3002
 
 headerStyle: underlined
 
-title: Bryan's WIP Homepage
+title: Minerva
 
-background: https://cdn.discordapp.com/attachments/337320584084062208/1098469548916744212/13u5ew9elt191.png
-backgroundOpacity: 0.2
+background: https://cdn.discordapp.com/attachments/337320584084062208/1098487762681872444/mdh54ilu39g81.png
+backgroundOpacity: 0.1
 
 #layout:
 #  System:
@@ -19,16 +19,17 @@ backgroundOpacity: 0.2
 
 # theme: dark
 # color: slate
-# favicon: https://www.google.com/favicon.ico
+
+favicon: https://icons8.com/icon/fMjAGSWjl4B0/m-key
 
 quicklaunch:
     searchDescriptions: true
     hideInternetSearch: true
     hideVisitURL: false
 
-providers:
-  openweathermap: openweathermapapikey
-  weatherapi: weatherapiapikey
+#providers:
+#  openweathermap: openweathermapapikey
+#  weatherapi: weatherapiapikey
 
 target: _blank
 hideVersion: true
