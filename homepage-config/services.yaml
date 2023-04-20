@@ -1,0 +1,48 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+#
+- System:
+    - Portainer:
+        icon: portainer
+        href: http://192.168.1.19:9000
+        ping: http://192.168.1.19:9000
+        widget:
+            type: portainer
+            url: https://192.168.1.19:9000
+            env: 2
+            key: ptr_KAByiGDWqPAPHzrp97T5ZsID6PnN1EvNPwCDnugyvCk=
+    - Grafana: 
+        icon: grafana
+        href: http://192.168.1.19:3000
+        ping: http://192.168.1.19:3000
+    - Prometheus:
+        icon: prometheus
+        href: http://192.168.1.19:9090
+        ping: http://192.168.1.19:9090
+        widget:
+            type: prometheus
+            url: http://192.168.1.19:9090
+    #uptime kuma
+
+- Network:
+    - Router:
+        icon: router
+        href: http://192.168.1.1
+    # pihole
+
+- Home:
+    - Home Assistant:
+        icon: home-assistant
+        href: http://192.168.1.19:8123
+        ping: http://192.168.1.19:8123
+
+#- My Second Group:
+#    - My Second Service:
+#        href: http://localhost/
+#        description: Homepage is the best
+
+#- My Third Group:
+#    - My Third Service:
+#        href: http://localhost/
+#        description: Homepage is 😎
