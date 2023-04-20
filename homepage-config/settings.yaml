@@ -5,7 +5,7 @@
 
 base: http://192.168.1.19:3002
 
-headerStyle: underlined
+headerStyle: boxed
 
 title: Minerva
 
@@ -17,8 +17,8 @@ backgroundOpacity: 0.2
 #    style: row
 #    columns: 4
 
-# theme: dark
-# color: slate
+theme: dark
+color: neutral
 
 favicon: https://cdn.discordapp.com/attachments/337320584084062208/1098491568480079872/icons8-m-key-96.png
 
