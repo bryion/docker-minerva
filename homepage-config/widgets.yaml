@@ -9,9 +9,6 @@
     disk: /
     units: imperial
 
-- search:
-    provider: google
-
 - datetime:
     text_size: xl
     format:
