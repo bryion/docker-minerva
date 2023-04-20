@@ -49,8 +49,8 @@ services:
     restart: unless-stopped
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
-    depends_on:
-      - cadvisor
+#    depends_on:
+#      - cadvisor
 
   grafana:
     image: grafana/grafana-oss:latest
