@@ -8,6 +8,15 @@ volumes:
 
 services:
 
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
+    ports:
+      - 3002:3000
+    volumes:
+      - /opt/homepage:/app/config # Make sure your local config directory exists
+      - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
+
   #homer:
   #  container_name: homer
   #  image: "b4bz/homer:latest"
@@ -62,29 +71,29 @@ services:
     volumes:
       - '/:/host:ro,rslave'
 
-  cadvisor:
-    # find latest version of cadvisor
-    image: gcr.io/cadvisor/cadvisor:v0.46.0
-    container_name: cadvisor
-    ports:
-      - "8080:8080"
-    network_mode: host
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-      - /dev/disk/:/dev/disk:ro
-    restart: unless-stopped
-    privileged: true
-    depends_on:
-      - redis
+#  cadvisor:
+#    # find latest version of cadvisor
+#    image: gcr.io/cadvisor/cadvisor:v0.46.0
+#    container_name: cadvisor
+#    ports:
+#      - "8080:8080"
+#    network_mode: host
+#    volumes:
+#      - /:/rootfs:ro
+#      - /var/run:/var/run:ro
+#      - /sys:/sys:ro
+#      - /var/lib/docker/:/var/lib/docker:ro
+#      - /dev/disk/:/dev/disk:ro
+#    restart: unless-stopped
+#    privileged: true
+#    depends_on:
+#      - redis
 
-  redis:
-    image: redis:latest
-    container_name: redis
-    ports:
-      - 6379:6379
+#  redis:
+#    image: redis:latest
+#    container_name: redis
+#    ports:
+#      - 6379:6379
 
   homeassistant:
     container_name: homeassistant
