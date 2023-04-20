@@ -4,7 +4,7 @@
 
 - greeting:
     text_size: xl
-    text: " Minerva"
+    text: " Minerva  "
 
 - resources:
     cpu: true
