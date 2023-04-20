@@ -29,6 +29,14 @@
     - Router:
         icon: router
         href: http://192.168.1.1
+    - Uptime Kuma:
+        icon: uptime-kuma
+        href: http://192.168.1.19:3001
+        ping: http://192.168.1.19:3001
+        widget:
+            type: uptimekuma
+            url: http://192.168.1.19:3001
+            slug: docker
     # pihole
 
 - Home:

@@ -17,15 +17,6 @@ services:
       - /opt/homepage:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
 
-  #homer:
-  #  container_name: homer
-  #  image: "b4bz/homer:latest"
-  #  ports:
-  #    - "8080:8080"
-  #  volumes:
-  #    - '/opt/homer:/www/assets'
-  #  restart: always
-  
   portainer:
     container_name: portainer
     image: "portainer/portainer-ce:latest"

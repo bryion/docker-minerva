@@ -10,7 +10,7 @@ headerStyle: underlined
 title: Minerva
 
 background: https://cdn.discordapp.com/attachments/337320584084062208/1098487762681872444/mdh54ilu39g81.png
-backgroundOpacity: 0.1
+backgroundOpacity: 0.2
 
 #layout:
 #  System:
@@ -20,7 +20,7 @@ backgroundOpacity: 0.1
 # theme: dark
 # color: slate
 
-favicon: https://icons8.com/icon/fMjAGSWjl4B0/m-key
+favicon: https://cdn.discordapp.com/attachments/337320584084062208/1098491568480079872/icons8-m-key-96.png
 
 quicklaunch:
     searchDescriptions: true
