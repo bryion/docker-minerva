@@ -60,6 +60,9 @@ services:
     volumes:
       - '/:/host:ro,rslave'
 
+  # cadvisor currently returning error:
+  # "machine_libipmctl.go:64] There are no NVM devices!"
+  # still runs fine; https://github.com/google/cadvisor/pull/3268
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:v0.47.0
     container_name: cadvisor
@@ -78,7 +81,7 @@ services:
     volumes:
       - /opt/uptimekuma:/app/data
     ports:
-      - 3001:3001  # <Host Port>:<Container Port>
+      - 3001:3001
     restart: always
 
   homeassistant:

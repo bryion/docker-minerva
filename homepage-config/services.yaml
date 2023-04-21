@@ -27,8 +27,10 @@
         widget:
             type: prometheus
             url: http://192.168.1.19:9090
-
-    #uptime kuma
+    - cAdvisor: 
+        icon: cadvisor
+        href: http://192.168.1.19:8080
+        ping: http://192.168.1.19:8080
 
 - Network:
     - Router:
