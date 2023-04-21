@@ -11,7 +11,7 @@
     cputemp: true
     memory: true
     disk: /
-    units: imperial
+    units: metric
 
 - datetime:
     text_size: xl
