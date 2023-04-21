@@ -63,45 +63,24 @@ services:
       - '/:/host:ro,rslave'
 
   cadvisor:
-    # TODO: latest tag is not updated, check latest release https://github.com/google/cadvisor/releases 
-    image: gcr.io/cadvisor/cadvisor:v0.47.0     
+    image: gcr.io/cadvisor/cadvisor:latest
     container_name: cadvisor
     ports:
-      - "8080:8080"
-    network_mode: host
+    - 8080:8080
     volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-      - /dev/disk/:/dev/disk:ro
-    devices:
-      - /dev/kmsg
-    restart: unless-stopped
-    privileged: true
-#  cadvisor:
-#    # find latest version of cadvisor
-#    image: gcr.io/cadvisor/cadvisor:v0.46.0
-#    container_name: cadvisor
-#    ports:
-#      - "8080:8080"
-#    network_mode: host
-#    volumes:
-#      - /:/rootfs:ro
-#      - /var/run:/var/run:ro
-#      - /sys:/sys:ro
-#      - /var/lib/docker/:/var/lib/docker:ro
-#      - /dev/disk/:/dev/disk:ro
-#    restart: unless-stopped
-#    privileged: true
-#    depends_on:
-#      - redis
+    - /:/rootfs:ro
+    - /var/run:/var/run:rw
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
+    depends_on:
+    - redis
+    
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+    - 6379:6379
 
-#  redis:
-#    image: redis:latest
-#    container_name: redis
-#    ports:
-#      - 6379:6379
   uptime-kuma:
     image: louislam/uptime-kuma:1
     container_name: uptime-kuma
