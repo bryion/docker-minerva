@@ -64,7 +64,7 @@ services:
 
   cadvisor:
     # TODO: latest tag is not updated, check latest release https://github.com/google/cadvisor/releases 
-    image: gcr.io/cadvisor/cadvisor:v0.45.0     
+    image: gcr.io/cadvisor/cadvisor:v0.47.0     
     container_name: cadvisor
     ports:
       - "8080:8080"
