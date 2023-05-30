@@ -1,0 +1,72 @@
+version: "3"
+
+services:
+  
+  nginxproxymanager:
+    image: 'jc21/nginx-proxy-manager:latest' 
+    container_name: nginxproxymanager
+    restart: unless-stopped 
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443' 
+    volumes:
+      - /opt/nginx/data:/data
+      - /opt/nginx/letsencrypt:/etc/letsencrypt 
+
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+    volumes:
+      - /opt/nextcloud/appdata:/config 
+      - /opt/nextcloud/data:/data
+    restart: unless-stopped 
+
+  homeassistant:
+    container_name: home-assistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    ports:
+      - "8123:8123"
+    volumes:
+      - /opt/hass:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin 
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+    volumes:
+      - /opt/jellyfin/config:/config
+      - /opt/jellyfin/tvshows:/data/tvshows
+      - /opt/jellyfin/movies:/data/movies 
+    restart: unless-stopped
+
+#  pihole:
+#    container_name: pihole
+#    image: pihole/pihole:latest
+#    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+#    ports:
+#      - "53:53/tcp"
+#      - "53:53/udp"
+      # - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+#      - "80:80/tcp"
+#    environment:
+#      TZ: 'America/Los_Angeles'
+      # WEBPASSWORD: 'set a secure password here or it will be random'
+    # Volumes store your data between container upgrades
+#    volumes:
+#      - './etc-pihole:/etc/pihole'
+#      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    # cap_add:
+      # - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+#    restart: unless-stopped

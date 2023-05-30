@@ -23,18 +23,6 @@ services:
       - TZ=America/Los_Angeles
     restart: unless-stopped
 
-  homeassistant:
-    container_name: home-assistant
-    image: "ghcr.io/home-assistant/home-assistant:stable"
-    ports:
-      - "8123:8123"
-    volumes:
-      - /opt/hass:/config
-      - /etc/localtime:/etc/localtime:ro
-    restart: unless-stopped
-    privileged: true
-    network_mode: host
-
   dozzle:
     container_name: dozzle
     image: amir20/dozzle:latest
