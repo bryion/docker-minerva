@@ -50,6 +50,8 @@ services:
       - /opt/jellyfin/movies:/data/movies 
     restart: unless-stopped
 
+  
+
 #  pihole:
 #    container_name: pihole
 #    image: pihole/pihole:latest
