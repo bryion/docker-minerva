@@ -53,7 +53,7 @@ services:
     image: ghcr.io/pterodactyl/panel:latest
     restart: always
     ports:
-      - "80:80"
+      - "79:80"
       - "444:443"
     links:
       - database
