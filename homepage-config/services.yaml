@@ -37,6 +37,16 @@
     - Router:
         icon: router
         href: http://192.168.1.1
+    - NGINX Proxy Manager:
+        icon: nginxproxymanager
+        href: http://192.168.1.19:81
+        server: docker #setup in docker.yaml
+        container: npm
+        #widget:
+        #    type: npm
+        #    url: http://192.168.1.19:81
+        #    username: create user with read only
+        #    password: 
     - Uptime Kuma:
         icon: uptime-kuma
         href: http://192.168.1.19:3001
@@ -52,3 +62,11 @@
         icon: home-assistant
         href: http://192.168.1.19:8123
         ping: http://192.168.1.19:8123
+    - Jellyfin:
+        icon: jellyfin
+        href: http://192.168.1.19:8096
+        ping: http://192.168.1.19:8096
+    - Nextcloud:
+        icon: nextcloud
+        href: http://192.168.1.19:443
+        ping: http://192.168.1.19:443
