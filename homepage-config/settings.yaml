@@ -3,7 +3,7 @@
 # https://gethomepage.dev/en/configs/settings
 #
 
-base: https://home.nlab.casa
+base: https://192.168.1.19:3002
 
 headerStyle: boxed
 
