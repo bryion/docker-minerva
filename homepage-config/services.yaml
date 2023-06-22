@@ -42,6 +42,9 @@
         icon: speedtest-tracker
         href: http://192.168.1.19:8081
         ping: http://192.168.1.19:8081
+        widget:
+            type: speedtest
+            url: http://192.168.1.19:8081
     - NGINX Proxy Manager:
         icon: nginx-proxy-manager
         href: http://192.168.1.19:81
