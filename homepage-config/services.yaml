@@ -37,9 +37,11 @@
     - Router:
         icon: router
         href: http://192.168.1.1
+        ping: http://192.168.1.1
     - NGINX Proxy Manager:
         icon: nginx-proxy-manager
         href: http://192.168.1.19:81
+        ping: http://192.168.1.19:81
         server: docker #setup in docker.yaml
         container: npm
         #widget:

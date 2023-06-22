@@ -48,11 +48,15 @@ services:
       <<: *db-environment
       MYSQL_DATABASE: "panel"
       MYSQL_USER: "pterodactyl"
+    networks:
+      - network
 
   cache:
     container_name: redis
     image: redis:alpine
     restart: always
+    networks:
+      - network
 
   panel:
     container_name: pterodactyl
@@ -80,6 +84,8 @@ services:
       REDIS_HOST: "cache"
       DB_HOST: "database"
       DB_PORT: "3306"
+    networks:
+      - network
 
 networks:
   network:
