@@ -34,4 +34,3 @@ quicklaunch:
 target: _blank
 hideVersion: true
 language: en
-hideErrors: true #for nginx error
