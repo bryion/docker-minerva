@@ -13,6 +13,8 @@ services:
     volumes:
       - /opt/nginx/data:/data
       - /opt/nginx/letsencrypt:/etc/letsencrypt 
+    networks:
+      - network
 
   nextcloud:
     image: lscr.io/linuxserver/nextcloud:latest
@@ -25,6 +27,8 @@ services:
       - /opt/nextcloud/appdata:/config 
       - /opt/nextcloud/data:/data
     restart: unless-stopped 
+    networks:
+      - network
 
   homeassistant:
     container_name: home-assistant
@@ -36,6 +40,8 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     privileged: true
+    networks:
+      - network
 
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
@@ -49,8 +55,13 @@ services:
       - /opt/jellyfin/tvshows:/data/tvshows
       - /opt/jellyfin/movies:/data/movies 
     restart: unless-stopped
+    networks:
+      - network
 
-  
+networks:
+  network:
+    name: minerva_network
+    external: true
 
 #  pihole:
 #    container_name: pihole

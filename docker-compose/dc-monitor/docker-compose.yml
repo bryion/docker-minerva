@@ -19,6 +19,8 @@ services:
     restart: unless-stopped
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
+    networks:
+      - network
 
   grafana:
     image: grafana/grafana-oss:latest
@@ -28,6 +30,8 @@ services:
     volumes:
       - /opt/grafana:/var/lib/grafana
     restart: unless-stopped
+    networks:
+      - network
 
   node_exporter:
     image: quay.io/prometheus/node-exporter:latest
@@ -38,6 +42,8 @@ services:
     restart: unless-stopped
     volumes:
       - '/:/host:ro,rslave'
+    networks:
+      - network
 
   # cadvisor currently returning error:
   # "machine_libipmctl.go:64] There are no NVM devices!"
@@ -53,6 +59,8 @@ services:
     - /sys:/sys:ro
     - /var/lib/docker/:/var/lib/docker:ro
     privileged: true
+    networks:
+      - network
 
   uptime-kuma:
     image: louislam/uptime-kuma:1
@@ -62,4 +70,10 @@ services:
     ports:
       - 3001:3001
     restart: always
+    networks:
+      - network
 
+networks:
+  network:
+    name: minerva_network
+    external: true

@@ -10,6 +10,8 @@ services:
     volumes:
       - /opt/homepage:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
+    networks:
+      - network
 
   portainer:
     container_name: portainer
@@ -22,6 +24,8 @@ services:
     environment:
       - TZ=America/Los_Angeles
     restart: unless-stopped
+    networks:
+      - network
 
   dozzle:
     container_name: dozzle
@@ -30,3 +34,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 9999:8080
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge
+    name: minerva_network
