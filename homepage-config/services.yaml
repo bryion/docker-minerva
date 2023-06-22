@@ -44,11 +44,11 @@
         ping: http://192.168.1.19:81
         server: docker #setup in docker.yaml
         container: npm
-        #widget:
-        #    type: npm
-        #    url: http://192.168.1.19:81
-        #    username: create user with read only
-        #    password: 
+        widget:
+            type: npm
+            url: http://192.168.1.19:81
+            username: bnexcess@gmail.com
+            password: bnexcess
     - Uptime Kuma:
         icon: uptime-kuma
         href: http://192.168.1.19:3001
@@ -70,8 +70,8 @@
         ping: http://192.168.1.19:8096
     - Nextcloud:
         icon: nextcloud
-        href: http://192.168.1.19:443
-        ping: http://192.168.1.19:443
+        href: http://nextcloud.nlab.casa
+        ping: http://nextcloud.nlab.casa
     - Pterodactyl:
         icon: pterodactyl
         href: http://ptero.nlab.casa
