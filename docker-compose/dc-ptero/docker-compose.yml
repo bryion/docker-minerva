@@ -37,6 +37,7 @@ x-common:
 #
 services:
   database:
+    container_name: mariadb
     image: mariadb:10.5
     restart: always
     command: --default-authentication-plugin=mysql_native_password
@@ -49,11 +50,13 @@ services:
     networks:
       - network
   cache:
+    container_name: redis
     image: redis:alpine
     restart: always
     networks:
       - network
   panel:
+    container_name: pterodactyl
     image: ghcr.io/pterodactyl/panel:latest
     restart: always
     ports:
