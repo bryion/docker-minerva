@@ -40,7 +40,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     privileged: true
-    network_mode: host
+    network_mode: host #required for hass
 
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
