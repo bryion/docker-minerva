@@ -3,7 +3,7 @@ version: '3'
 services:
 
   flame:
-    image: pawelmalak/flame
+    image: pawelmalak/flame:latest
     container_name: flame
     volumes:
       - /path/to/host/data:/app/data
