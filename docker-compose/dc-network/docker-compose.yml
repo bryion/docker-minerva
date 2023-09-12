@@ -4,7 +4,7 @@ services:
   
   tailscale: 
       container_name: tailscale 
-      hostname: tailscale-nas 
+      hostname: minerva
       image: tailscale/tailscale:stable 
       volumes: 
         - ./tailscale:/var/lib          # State data will be stored in this directory 
@@ -12,6 +12,8 @@ services:
       cap_add:                          # Required for tailscale to work 
         - net_admin 
         - sys_module 
+      environment:
+        - TS_AUTHKEY=${TS_AUTHKEY}
       command: tailscaled 
       privileged: true 
       restart: unless-stopped
