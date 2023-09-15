@@ -17,7 +17,7 @@ services:
       restart: unless-stopped
 
   nginxproxymanager:
-    image: 'jc21/nginx-proxy-manager:stable' 
+    image: 'jc21/nginx-proxy-manager:latest' 
     container_name: nginxproxymanager
     restart: unless-stopped 
     ports:
