@@ -46,7 +46,7 @@ services:
 
   homeassistant:
     container_name: home-assistant
-    image: "ghcr.io/home-assistant/home-assistant:stable"
+    image: "ghcr.io/home-assistant/home-assistant:latest"
     ports:
       - "8123:8123"
     volumes:
