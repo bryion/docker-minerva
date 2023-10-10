@@ -2,22 +2,20 @@ version: '3'
 
 services:
 
-
-
-  flame:
-    image: pawelmalak/flame:latest
-    container_name: flame
-    volumes:
-      - /path/to/host/data:/app/data
-      #- /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
-    ports:
-      - 5005:5005
-    #secrets:
-    #  - password # optional but required for (1)
-    environment:
-      - PASSWORD=minervaflame
-    #  - PASSWORD_FILE=/run/secrets/password # optional but required for (1)
-    restart: unless-stopped
+  #flame:
+  #  image: pawelmalak/flame:latest
+  #  container_name: flame
+  #  volumes:
+  #    - /path/to/host/data:/app/data
+  #    #- /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
+  #  ports:
+  #    - 5005:5005
+  #  #secrets:
+  #  #  - password # optional but required for (1)
+  #  environment:
+  #    - PASSWORD=minervaflame
+  #  #  - PASSWORD_FILE=/run/secrets/password # optional but required for (1)
+  #  restart: unless-stopped
 
   portainer:
     container_name: portainer
