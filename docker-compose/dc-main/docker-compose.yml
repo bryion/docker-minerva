@@ -17,15 +17,6 @@ services:
     #  - PASSWORD_FILE=/run/secrets/password # optional but required for (1)
     restart: unless-stopped
 
-  homepage:
-    image: ghcr.io/gethomepage/homepage:latest
-    container_name: homepage
-    ports:
-      - 3002:3000
-    volumes:
-      - /opt/homepage:/app/config # Make sure your local config directory exists
-      - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
-
   portainer:
     container_name: portainer
     image: "portainer/portainer-ce:latest"
