@@ -24,7 +24,7 @@ services:
       - 3002:3000
     volumes:
       - /opt/homepage:/app/config # Make sure your local config directory exists
-  #    - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
+      - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
 
   portainer:
     container_name: portainer
