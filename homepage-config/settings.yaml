@@ -9,7 +9,7 @@ headerStyle: boxed
 
 title: Minerva
 
-background: /app/config/background_redgalaxy.png
+background: /images/background_redgalaxy.png
 backgroundOpacity: 0.2
 
 #layout:
@@ -20,7 +20,7 @@ backgroundOpacity: 0.2
 theme: dark
 color: neutral
 
-favicon: /app/config/icon_minerva.png
+favicon: /images/icon_minerva.png
 
 quicklaunch:
     searchDescriptions: true
