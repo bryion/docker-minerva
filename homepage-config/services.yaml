@@ -71,10 +71,10 @@
         icon: home-assistant
         href: http://192.168.1.19:8123
         ping: http://192.168.1.19:8123
-    - Jellyfin:
-        icon: jellyfin
-        href: http://192.168.1.19:8096
-        ping: http://192.168.1.19:8096
+#    - Jellyfin:
+#        icon: jellyfin
+#        href: http://192.168.1.19:8096
+#        ping: http://192.168.1.19:8096
     - Nextcloud:
         icon: nextcloud
         href: http://nextcloud.nlab.casa
