@@ -79,10 +79,10 @@ services:
       - /media/drive2/jellyfin/tvshows:/data/tvshows
       - /media/drive2/jellyfin/movies:/data/movies
     ports:
-      - 8096:8096
-      - 8920:8920 #optional
-      - 7359:7359/udp #optional
-      - 1900:1900/udp #optional
+      - 8096:8096 # Http webUI.
+      # - 8920:8920 #optional - Https webUI (you need to set up your own certificate).
+      - 7359:7359/udp #optional - Allows clients to discover Jellyfin on the local network.
+      # - 1900:1900/udp #optional - Service discovery used by DNLA and clients.
     restart: unless-stopped
     networks:
       - network
