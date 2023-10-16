@@ -31,11 +31,6 @@
         widget:
             type: prometheus
             url: http://192.168.1.19:9090
-    - Glances:
-        icon: glances
-        href: http://192.168.1.19:61208
-        ping: http://192.168.1.19:61208
-    
 
 - Network:
     - Router:
