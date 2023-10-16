@@ -10,6 +10,7 @@ services:
     volumes:
       - /opt/homepage/config:/app/config # Make sure your local config directory exists
       - /opt/homepage/images:/app/public/images
+      - /media/drive2:/media/drive2
       - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
 
   tailscale: 
