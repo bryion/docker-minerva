@@ -49,8 +49,8 @@ services:
       - PGID=1000
       - TZ=America/Los_Angeles
     volumes:
-      - /opt/nextcloud/appdata:/config 
-      - /opt/nextcloud/data:/data
+      - /media/drive2/nextcloud/appdata:/config 
+      - /media/drive2/nextcloud/data:/data
     restart: unless-stopped
     networks:
       - network 
@@ -75,9 +75,14 @@ services:
       - PGID=1000
       - TZ=America/Los_Angeles
     volumes:
-      - /opt/jellyfin/config:/config
-      - /opt/jellyfin/tvshows:/data/tvshows
-      - /opt/jellyfin/movies:/data/movies 
+      - /media/drive2/jellyfin/config:/config
+      - /media/drive2/jellyfin/tvshows:/data/tvshows
+      - /media/drive2/jellyfin/movies:/data/movies
+    ports:
+      - 8096:8096
+      - 8920:8920 #optional
+      - 7359:7359/udp #optional
+      - 1900:1900/udp #optional
     restart: unless-stopped
     networks:
       - network
