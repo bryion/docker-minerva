@@ -63,6 +63,16 @@ services:
       - 3001:3001
     restart: always
 
+  glances:
+    container_name: glances
+    image: nicolargo/glances:latest-alpine
+    restart: always
+    pid: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - "GLANCES_OPT=-w"
+
 networks:
   network:
     name: minerva_network

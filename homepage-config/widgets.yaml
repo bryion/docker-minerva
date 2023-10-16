@@ -10,7 +10,9 @@
     cpu: true
     cputemp: true
     memory: true
-    disk: /
+    disk:
+        - /
+        - /media/drive2
     units: metric
 
 - datetime:
