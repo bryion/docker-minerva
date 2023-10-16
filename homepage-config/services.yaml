@@ -2,6 +2,24 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/en/configs/services
 #
+- Home:
+    - Home Assistant:
+        icon: home-assistant
+        href: http://192.168.1.19:8123
+        ping: http://192.168.1.19:8123
+    - Jellyfin:
+        icon: jellyfin
+        href: http://192.168.1.19:8096
+        ping: http://192.168.1.19:8096
+    - Nextcloud:
+        icon: nextcloud
+        href: http://nextcloud.nlab.casa
+        ping: http://nextcloud.nlab.casa
+    - Pterodactyl:
+        icon: pterodactyl
+        href: http://ptero.nlab.casa
+        ping: http://ptero.nlab.casa
+
 - System:
     - Portainer:
         icon: portainer
@@ -65,20 +83,3 @@
             slug: docker
     # pihole
 
-- Home:
-    - Home Assistant:
-        icon: home-assistant
-        href: http://192.168.1.19:8123
-        ping: http://192.168.1.19:8123
-#    - Jellyfin:
-#        icon: jellyfin
-#        href: http://192.168.1.19:8096
-#        ping: http://192.168.1.19:8096
-    - Nextcloud:
-        icon: nextcloud
-        href: http://nextcloud.nlab.casa
-        ping: http://nextcloud.nlab.casa
-    - Pterodactyl:
-        icon: pterodactyl
-        href: http://ptero.nlab.casa
-        ping: http://ptero.nlab.casa
