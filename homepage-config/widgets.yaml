@@ -15,6 +15,19 @@
         - /media/drive2
     units: metric
 
+- glances:
+    url: http://192.168.1.19:61208
+    # username: user # optional if auth enabled in Glances
+    # password: pass # optional if auth enabled in Glances
+    cpu: true # optional, enabled by default, disable by setting to false
+    mem: true # optional, enabled by default, disable by setting to false
+    cputemp: true # disabled by default
+    uptime: true # disabled by default
+    disk: # disabled by default, use mount point of disk(s) in glances.
+        - /
+        - /media/drive2
+    expanded: true # show the expanded view
+
 - datetime:
     text_size: xl
     format:
