@@ -89,12 +89,12 @@
 
 # These are all integrated through Glances
 - Metrics: 
-    - System Information:
-        widget: 
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: info
-            chart: false
+    #- System Information:
+    #    widget: 
+    #        type: glances
+    #        url: http://192.168.1.19:61208
+    #        metric: info
+    #        chart: false
     #- CPU Usage:
     #    widget:
     #        type: glances
@@ -128,7 +128,7 @@
             url: http://192.168.1.19:61208
             metric: disk:nvme0n1
             chart: true
-    - Drive1 I/O:
+    - Drive2 I/O:
         widget: 
             type: glances
             url: http://192.168.1.19:61208

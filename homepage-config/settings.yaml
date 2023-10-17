@@ -10,11 +10,17 @@ title: Minerva
 background: /images/background_redgalaxy.png
 backgroundOpacity: 0.2
 
-#lock Metrics section to 1 column
+
 layout:
-  Metrics:
-    style: row
-    columns: 1
+    Home:
+    System:
+    Network:
+        style: row
+        columns: 3
+    Metrics:
+        style: row
+        columns: 1
+#lock Metrics section to 1 column
 
 theme: dark
 color: neutral
