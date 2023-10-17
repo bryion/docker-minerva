@@ -70,8 +70,8 @@
         icon: nginx-proxy-manager
         href: http://192.168.1.19:81
         ping: http://192.168.1.19:81
-        server: docker #setup in docker.yaml
-        container: nginxproxymanager
+        # server: docker #setup in docker.yaml
+        # container: nginxproxymanager
         widget:
             type: npm
             url: http://192.168.1.19:81
