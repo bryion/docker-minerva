@@ -22,8 +22,9 @@ layout:
         rows: 1
     Metrics:
         style: row
-        columns: 1
-#lock Metrics section to 1 column
+        columns: 2
+        header: false
+#lock Metrics section to 2 columns at the bottom
 
 theme: dark
 color: neutral
