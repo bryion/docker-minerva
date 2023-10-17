@@ -15,12 +15,12 @@ layout:
     Home:
     System:
     Network:
-        style: row
-        columns: 3
-    Metrics:
-        style: row
-        columns: 1
+    
 #lock Metrics section to 1 column
+layout:
+  Metrics:
+    style: row
+    columns: 1
 
 theme: dark
 color: neutral
