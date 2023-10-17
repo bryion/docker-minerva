@@ -94,43 +94,49 @@
             type: glances
             url: http://192.168.1.19:61208
             metric: info
-    - CPU Usage:
-        widget:
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: cpu
+            chart: false
+    #- CPU Usage:
+    #    widget:
+    #        type: glances
+    #        url: http://192.168.1.19:61208
+    #        metric: cpu
     - Network Usage:
         widget:
             type: glances
             url: http://192.168.1.19:61208
             metric: network:eth0
-    - Memory Usage:
-        widget: 
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: memory
+    #- Memory Usage:
+    #    widget: 
+    #        type: glances
+    #        url: http://192.168.1.19:61208
+    #        metric: memory
     - Top Processes:
         widget: 
             type: glances
             url: http://192.168.1.19:61208
             metric: process
-    - CPU Temperature:
+    #- CPU Temperature:
+    #    widget: 
+    #        type: glances
+    #        url: http://192.168.1.19:61208
+    #        metric: sensor:cpu
+    - Drive1 I/O:
         widget: 
             type: glances
             url: http://192.168.1.19:61208
-            metric: sensor:cpu
-    - Disk I/O:
+            metric: disk:nvme0n1
+    - Drive1 I/O:
         widget: 
             type: glances
             url: http://192.168.1.19:61208
-            metric: disk:sbd #temp
-    - Disk Usage 1:
-        widget:
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: fs:/
-    - Disk Usage 2:
-        widget:
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: fs:/media/drive2
+            metric: disk:nvme1n1
+    #- Disk Usage 1:
+    #    widget:
+    #        type: glances
+    #        url: http://192.168.1.19:61208
+    #        metric: fs:/
+    #- Disk Usage 2:
+    #    widget:
+    #        type: glances
+    #        url: http://192.168.1.19:61208
+    #        metric: fs:/media/drive2
