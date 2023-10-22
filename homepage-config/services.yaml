@@ -7,18 +7,26 @@
         icon: home-assistant
         href: http://192.168.1.19:8123
         ping: http://192.168.1.19:8123
-    - Jellyfin:
-        icon: jellyfin
-        href: http://192.168.1.19:8096
-        ping: http://192.168.1.19:8096
     - Nextcloud:
         icon: nextcloud
         href: http://nextcloud.nlab.casa
         ping: http://nextcloud.nlab.casa
-    - Pterodactyl:
-        icon: pterodactyl
-        href: http://ptero.nlab.casa
-        ping: http://ptero.nlab.casa
+    - Jellyfin:
+        icon: jellyfin
+        href: http://192.168.1.19:8096
+        ping: http://192.168.1.19:8096
+    - Prowlarr:
+        icon: prowlarr
+        href: http://192.168.1.19:9696
+        ping: http://192.168.1.19:9696
+    - Radarr:
+        icon: radarr
+        href: http://192.168.1.19:7878
+        ping: http://192.168.1.19:7878
+    - Sonarr:
+        icon: sonarr
+        href: http://192.168.1.19:8989
+        ping: http://192.168.1.19:8989
 
 - System:
     - Portainer:
@@ -85,6 +93,10 @@
             type: uptimekuma
             url: http://192.168.1.19:3001
             slug: docker
+    - Pterodactyl:
+        icon: pterodactyl
+        href: http://ptero.nlab.casa
+        ping: http://ptero.nlab.casa
     # pihole
 
 # These are all integrated through Glances
