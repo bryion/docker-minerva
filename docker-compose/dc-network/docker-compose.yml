@@ -195,8 +195,8 @@ services:
       # docker exec -it pihole_container_name pihole -a -p
     # WEBPASSWORD: 'set a secure password here or it will be random'
     volumes:
-      - './etc-pihole:/etc/pihole'
-      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+      - '/opt/pihole/etc-pihole:/etc/pihole'
+      - '/opt/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     # cap_add:
       # - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
