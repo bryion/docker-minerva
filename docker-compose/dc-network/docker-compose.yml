@@ -157,30 +157,50 @@ services:
       - 9696:9696
     restart: unless-stopped
 
-  adguardhome:
-    image: adguard/adguardhome
-    container_name: adguardhome
-    ports:
-     - 53:53/tcp #plain dns
-     - 53:53/udp #plain dns
-     #- 67:67/udp #add if you intend to use AdGuard Home as a DHCP server
-     #- 68:68/udp #add if you intend to use AdGuard Home as a DHCP server
-     #- 68:68/tcp #add if you intend to use AdGuard Home as a DHCP server
-     - 85:80/tcp #
-     #- 443:443/tcp
-     #- 443:443/udp
-     - 3005:3000/tcp
-     #- 853:853/tcp
-     #- 784:784/udp
-     #- 853:853/udp
-     #- 8853:8853/udp
-     #- 5443:5443/tcp
-     #- 5443:5443/udp
-    volumes:
-      - /opt/adguardhome/work:/opt/adguardhome/work
-      - /opt/adguardhome/conf:/opt/adguardhome/conf
-    restart: unless-stopped
+#  adguardhome:
+#    image: adguard/adguardhome
+#    container_name: adguardhome
+#    ports:
+#     - 53:53/tcp #plain dns
+#     - 53:53/udp #plain dns
+#     #- 67:67/udp #add if you intend to use AdGuard Home as a DHCP server
+#     #- 68:68/udp #add if you intend to use AdGuard Home as a DHCP server
+#     #- 68:68/tcp #add if you intend to use AdGuard Home as a DHCP server
+#     - 85:80/tcp #
+#     #- 443:443/tcp
+#     #- 443:443/udp
+#     - 3005:3000/tcp
+#     #- 853:853/tcp
+#     #- 784:784/udp
+#     #- 853:853/udp
+#     #- 8853:8853/udp
+#     #- 5443:5443/tcp
+#     #- 5443:5443/udp
+#    volumes:
+#      - /opt/adguardhome/work:/opt/adguardhome/work
+#      - /opt/adguardhome/conf:/opt/adguardhome/conf
+#    restart: unless-stopped
 
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      # - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+      - "80:80/tcp"
+    environment:
+      TZ: 'America/Los_Angeles'
+      # docker exec -it pihole_container_name pihole -a -p
+    # WEBPASSWORD: 'set a secure password here or it will be random'
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    # cap_add:
+      # - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+    restart: unless-stopped  
 
 networks:
   network:
