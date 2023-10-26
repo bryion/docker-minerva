@@ -67,7 +67,7 @@
         icon: router
         href: http://192.168.1.1
         ping: http://192.168.1.1
-    - Pi-Hole:
+    - Pi-hole:
         icon: pi-hole
         href: http://192.168.1.19:86/admin
         ping: http://192.168.1.19:86/admin
