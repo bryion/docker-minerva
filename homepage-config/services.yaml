@@ -67,10 +67,10 @@
         icon: router
         href: http://192.168.1.1
         ping: http://192.168.1.1
-    - Adguard Home:
-        icon: adguard-home
-        href: http://192.168.1.19:85
-        ping: http://192.168.1.19:85
+    - Pi-Hole:
+        icon: pi-hole
+        href: http://192.168.1.19:86/admin
+        ping: http://192.168.1.19:86/admin
     - Speedtest Tracker:
         icon: speedtest-tracker
         href: http://192.168.1.19:8081
@@ -101,7 +101,6 @@
         icon: pterodactyl
         href: http://ptero.nlab.casa
         ping: http://ptero.nlab.casa
-    # pihole
 
 # These are all integrated through Glances
 - Metrics: 
