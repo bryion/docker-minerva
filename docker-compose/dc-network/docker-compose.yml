@@ -189,7 +189,7 @@ services:
       - "53:53/tcp"
       - "53:53/udp"
       # - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
-      - "80:80/tcp"
+      - "86:80/tcp"
     environment:
       TZ: 'America/Los_Angeles'
       # docker exec -it pihole_container_name pihole -a -p
