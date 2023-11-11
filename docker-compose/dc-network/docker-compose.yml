@@ -65,7 +65,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /dev/serial/ttyUSB0/:/dev/serial/ttyUSB0
     devices:
-      - /dev/serial/by-id/:/dev/serial/by-id
+      - /dev/serial/ttyUSB0/:/dev/serial/by-id
     restart: unless-stopped
     privileged: true
     network_mode: host #required for hass
