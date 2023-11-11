@@ -87,7 +87,7 @@ services:
       - network
   
   jellyfin:
-    image: lscr.io/linuxserver/jellyfin:latest
+    image: ghcr.io/hotio/jellyfin:latest
     container_name: jellyfin 
     environment:
       - PUID=1000
@@ -95,11 +95,11 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /media/drive2/jellyfin/config:/config
-      - /media/drive2/torrents:/data
+      - /media/drive2/data/media:/data
     ports:
       - 8096:8096 # Http webUI.
       # - 8920:8920 #optional - Https webUI (you need to set up your own certificate).
-      - 7359:7359/udp #optional - Allows clients to discover Jellyfin on the local network.
+      # - 7359:7359/udp #optional - Allows clients to discover Jellyfin on the local network.
       # - 1900:1900/udp #optional - Service discovery used by DNLA and clients.
     restart: unless-stopped
     networks:
@@ -107,7 +107,7 @@ services:
   
   radarr:
     container_name: radarr
-    image: lscr.io/linuxserver/radarr:latest
+    image: ghcr.io/hotio/radarr:latest
     networks:
       - network
     environment:
@@ -118,11 +118,11 @@ services:
       - 7878:7878
     volumes:
       - /media/drive2/radarr/config:/config
-      - /media/drive2/torrents:/downloads
+      - /media/drive2/data:/data
     restart: "unless-stopped"
 
   sonarr:
-    image: lscr.io/linuxserver/sonarr:latest
+    image: ghcr.io/hotio/sonarr:latest
     container_name: sonarr
     networks:
       - network
@@ -132,14 +132,14 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /media/drive2/sonarr/config:/config
-      - /media/drive2/torrents:/downloads
+      - /media/drive2/data:/data
     ports:
       - 8989:8989
     restart: unless-stopped
 
   prowlarr:
     container_name: prowlarr
-    image: lscr.io/linuxserver/prowlarr:latest
+    image: ghcr.io/hotio/prowlarr:latest
 
     # Uncomment below if vpn is enabled
     # depends_on:               # Uncomment this line if vpn is enabled
@@ -160,7 +160,7 @@ services:
     restart: unless-stopped
 
   sabnzbd:
-    image: lscr.io/linuxserver/sabnzbd:latest
+    image: ghcr.io/hotio/sabnzbd:latest
     container_name: sabnzbd
     environment:
       - PUID=1000
@@ -168,8 +168,7 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /media/drive2/sabnzbd/config:/config
-      - /media/drive2/torrents:/downloads #optional
-      - /media/drive2/sabnzbd/incomplete:/incomplete-downloads #optional
+      - /media/drive2/data/usenet:/data
     ports:
       - 8181:8080
     restart: unless-stopped
