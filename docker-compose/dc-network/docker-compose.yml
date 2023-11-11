@@ -95,7 +95,7 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /media/drive2/jellyfin/config:/config
-      - /media/drive2/data/media:/data
+      - /media/drive2/data/usenet:/data
     ports:
       - 8096:8096 # Http webUI.
       # - 8920:8920 #optional - Https webUI (you need to set up your own certificate).
