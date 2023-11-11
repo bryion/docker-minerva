@@ -27,7 +27,10 @@
         icon: sonarr
         href: http://192.168.1.19:8989
         ping: http://192.168.1.19:8989
-
+    - SABnzbd:
+        icon: sabnzbd
+        href: http://192.168.1.19:8181
+        ping: http://192.168.1.19:8181
 - System:
     - Portainer:
         icon: portainer
