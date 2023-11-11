@@ -63,6 +63,9 @@ services:
     volumes:
       - /opt/hass:/config
       - /etc/localtime:/etc/localtime:ro
+      - /dev/serial/ttyUSB0/:/dev/serial/ttyUSB0
+    devices:
+      - /dev/serial/by-id/:/dev/serial/by-id
     restart: unless-stopped
     privileged: true
     network_mode: host #required for hass
@@ -151,10 +154,24 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - /media/drive2/prowlarr/config:/config
-
     # Comment below ports if VPN is enabled.
     ports:
       - 9696:9696
+    restart: unless-stopped
+
+  sabnzbd:
+    image: lscr.io/linuxserver/sabnzbd:latest
+    container_name: sabnzbd
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+    volumes:
+      - /media/drive2/sabnzbd/config:/config
+      - /media/drive2/torrents:/downloads #optional
+      - /media/drive2/sabnzbd/incomplete:/incomplete-downloads #optional
+    ports:
+      - 8181:8080
     restart: unless-stopped
 
 #  adguardhome:
