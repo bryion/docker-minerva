@@ -87,7 +87,7 @@ services:
       - network
   
   jellyfin:
-    image: ghcr.io/hotio/jellyfin:latest
+    image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin 
     environment:
       - PUID=1000
@@ -107,7 +107,7 @@ services:
   
   radarr:
     container_name: radarr
-    image: ghcr.io/hotio/radarr:latest
+    image: lscr.io/linuxserver/radarr:latest
     networks:
       - network
     environment:
@@ -122,7 +122,7 @@ services:
     restart: "unless-stopped"
 
   sonarr:
-    image: ghcr.io/hotio/sonarr:latest
+    image: lscr.io/linuxserver/sonarr:latest
     container_name: sonarr
     networks:
       - network
@@ -139,7 +139,7 @@ services:
 
   prowlarr:
     container_name: prowlarr
-    image: ghcr.io/hotio/prowlarr:latest
+    image: lscr.io/linuxserver/prowlarr:latest
 
     # Uncomment below if vpn is enabled
     # depends_on:               # Uncomment this line if vpn is enabled
@@ -160,7 +160,7 @@ services:
     restart: unless-stopped
 
   sabnzbd:
-    image: ghcr.io/hotio/sabnzbd:latest
+    image: lscr.io/linuxserver/sabnzbd:latest
     container_name: sabnzbd
     environment:
       - PUID=1000
