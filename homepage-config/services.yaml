@@ -45,6 +45,10 @@
         icon: dozzle
         href: http://192.168.1.19:9999
         ping: http://192.168.1.19:9999
+    - File Browser: 
+        icon: filebrowser
+        href: http://192.168.1.19:8383
+        ping: http://192.168.1.19:8383
     - Grafana: 
         icon: grafana
         href: http://192.168.1.19:3000

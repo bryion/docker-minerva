@@ -66,6 +66,20 @@ services:
       - 3001:3001
     restart: always
 
+  #from techno tim. security opt restricts changing of permissions.
+  file-browser:
+    image: filebrowser/filebrowser:latest
+    container_name: file-browser
+    user: 1000:1000
+    ports:
+      - 8383:80
+    volumes:
+      - /:/srv
+      - /opt/filebrowser/filebrowser.db:/database.db #must be created if not already !! to do in ansible
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
   glances:
     container_name: glances
     image: nicolargo/glances:latest-alpine
