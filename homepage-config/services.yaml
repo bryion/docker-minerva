@@ -45,10 +45,6 @@
         icon: dozzle
         href: http://192.168.1.19:9999
         ping: http://192.168.1.19:9999
-    - QDirStat:
-        icon: qdirstat
-        href: http://192.168.1.19:5800
-        ping: http://192.168.1.19:5800
     - Grafana: 
         icon: grafana
         href: http://192.168.1.19:3000
