@@ -13,20 +13,6 @@ services:
       - /media/drive2:/media/drive2
       - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
 
-  tailscale: 
-      container_name: tailscale 
-      hostname: minerva
-      image: tailscale/tailscale:latest 
-      volumes: 
-        - ./tailscale:/var/lib          # State data will be stored in this directory 
-        - /dev/net/tun:/dev/net/tun     # Required for tailscale to work 
-      cap_add:                          # Required for tailscale to work 
-        - net_admin 
-        - sys_module 
-      command: tailscaled 
-      privileged: true 
-      restart: unless-stopped
-
   nginxproxymanager:
     image: 'jc21/nginx-proxy-manager:latest' 
     container_name: nginxproxymanager
