@@ -11,6 +11,10 @@
         icon: nextcloud
         href: http://nextcloud.nlab.casa
         ping: http://nextcloud.nlab.casa
+    - Actual Budget:
+        icon: actual
+        href: http://192.168.1.19:5006
+        ping: http://192.168.1.19:5006
     - Jellyfin:
         icon: jellyfin
         href: http://192.168.1.19:8096
