@@ -74,7 +74,9 @@ services:
   
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
-    container_name: jellyfin 
+    container_name: jellyfin
+    devices:
+      - /dev/dri:/dev/dri
     environment:
       - PUID=1000
       - PGID=1000
