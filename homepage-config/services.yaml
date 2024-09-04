@@ -89,6 +89,7 @@
         widget:
             type: speedtest
             url: http://192.168.1.19:8081
+            bitratePrecision: 0
     - NGINX Proxy Manager:
         icon: nginx-proxy-manager
         href: http://192.168.1.19:81
@@ -108,10 +109,10 @@
             type: uptimekuma
             url: http://192.168.1.19:3001
             slug: docker
-    - Pterodactyl:
-        icon: pterodactyl
-        href: http://ptero.nlab.casa
-        ping: http://ptero.nlab.casa
+#    - Pterodactyl:
+#        icon: pterodactyl
+#        href: http://ptero.nlab.casa
+#        ping: http://ptero.nlab.casa
 
 # These are all integrated through Glances
 - Metrics: 
