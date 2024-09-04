@@ -66,15 +66,15 @@ services:
     environment:
      - PUID=1000
      - PGID=1000
-     - APP_DEBUG=true
+    # - APP_DEBUG=true
      - APP_KEY=base64:4Itl3CT8DzilBJOT5NwMohdyQa0iAHEbLUzqGAJNDAs=
      - DB_CONNECTION=sqlite
-     - SPEEDTEST_SCHEDULE=0 4 * * *
+    # - SPEEDTEST_SCHEDULE=0 4 * * *
     # - SPEEDTEST_SERVERS=
-     - PRUNE_RESULTS_OLDER_THAN=1095
+    # - PRUNE_RESULTS_OLDER_THAN=1095
     # - CHART_DATETIME_FORMAT= #https://www.php.net/manual/en/datetime.format.php
     # - DATETIME_FORMAT= #https://www.php.net/manual/en/datetime.format.php
-     - APP_TIMEZONE=America/Los_Angeles
+    # - APP_TIMEZONE=America/Los_Angeles
     volumes:
      - /opt/speedtest-tracker/config:/config
     # - /path/to-custom-ssl-keys:/config/keys
