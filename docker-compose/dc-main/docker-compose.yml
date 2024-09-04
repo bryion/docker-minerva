@@ -29,10 +29,11 @@ services:
       - TZ=America/Los_Angeles
     restart: unless-stopped
 
-  watchtower:
-    image: containrrr/watchtower
-    volumes:
-     - /var/run/docker.sock:/var/run/docker.sock
+#  watchtower:
+#    container_name: watchtower
+#    image: containrrr/watchtower
+#    volumes:
+#     - /var/run/docker.sock:/var/run/docker.sock
 
   dozzle:
     container_name: dozzle
@@ -43,6 +44,7 @@ services:
       - 9999:8080
 
   actual_server:
+    container_name: actual-budget
     image: docker.io/actualbudget/actual-server:latest
     ports:
       # This line makes Actual available at port 5006 of the device you run the server on,

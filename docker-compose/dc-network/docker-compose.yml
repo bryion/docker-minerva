@@ -221,6 +221,8 @@ services:
       # - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
     restart: unless-stopped  
 
+# sudo docker network create minerva_network
+# error: minerva_network not found, external
 networks:
   network:
     name: minerva_network
