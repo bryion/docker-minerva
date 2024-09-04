@@ -12,6 +12,7 @@ services:
       - /opt/homepage/images:/app/public/images
       - /media/drive2:/media/drive2
       - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
+    restart: always
 
   nginxproxymanager:
     image: 'jc21/nginx-proxy-manager:latest' 
