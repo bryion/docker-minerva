@@ -28,7 +28,9 @@ services:
       - network
 
   nextcloud:
-    image: lscr.io/linuxserver/nextcloud:previous-28.0.8-ls5
+  #It is only possible to upgrade one major version at a time. 
+  #For example, if you want to upgrade from version 14 to 16, you will have to upgrade from version 14 to 15, then from 15 to 16.
+    image: lscr.io/linuxserver/nextcloud:29.0.0
     container_name: nextcloud
     environment:
       - PUID=1000
