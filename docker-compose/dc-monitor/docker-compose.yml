@@ -43,7 +43,7 @@ services:
   # "machine_libipmctl.go:64] There are no NVM devices!"
   # still runs fine; https://github.com/google/cadvisor/pull/3268
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.47.0
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
     container_name: cadvisor
     ports:
       - 8080:8080
@@ -82,7 +82,7 @@ services:
 
   glances:
     container_name: glances
-    image: nicolargo/glances:latest-alpine
+    image: nicolargo/glances:latest-full
     restart: always
     pid: host
     network_mode: host

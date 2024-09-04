@@ -33,6 +33,9 @@ services:
   #For example, if you want to upgrade from version 14 to 16, you will have to upgrade from version 14 to 15, then from 15 to 16.
     image: lscr.io/linuxserver/nextcloud:29.0.0
     container_name: nextcloud
+    ports:
+      - 8282:443
+      - 8383:80
     environment:
       - PUID=1000
       - PGID=1000
@@ -67,7 +70,7 @@ services:
     environment:
      - PUID=1000
      - PGID=1000
-    # - APP_DEBUG=true
+     - APP_DEBUG=true
      - APP_KEY=base64:4Itl3CT8DzilBJOT5NwMohdyQa0iAHEbLUzqGAJNDAs=
      - DB_CONNECTION=sqlite
     # - SPEEDTEST_SCHEDULE=0 4 * * *
@@ -79,7 +82,7 @@ services:
     volumes:
      - /opt/speedtest-tracker/config:/config
     # - /path/to-custom-ssl-keys:/config/keys
-    image: lscr.io/linuxserver/speedtest-tracker:0.21.2
+    image: lscr.io/linuxserver/speedtest-tracker:latest
     restart: unless-stopped
     networks:
       - network
