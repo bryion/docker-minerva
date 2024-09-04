@@ -28,6 +28,14 @@ services:
     environment:
       - TZ=America/Los_Angeles
     restart: unless-stopped
+  
+  whatsupdocker:
+    image: fmartinou/whats-up-docker
+    container_name: whatsupdocker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 3535:3000
 
 #  watchtower:
 #    container_name: watchtower

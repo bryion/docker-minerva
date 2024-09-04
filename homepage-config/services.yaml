@@ -45,6 +45,13 @@
 #            url: https://192.168.1.19:9000
 #            env: 2
 #            key: 
+    - What's up Docker?:
+        icon: wud-light
+        href: http://192.168.1.19:3535
+        ping: http://192.168.1.19:3535
+        widget:
+            type: whatsupdocker
+            url: http://192.168.1.19:3535
     - Dozzle: 
         icon: dozzle
         href: http://192.168.1.19:9999
