@@ -3,7 +3,7 @@ version: "3"
 services:
 
   homepage:
-    image: ghcr.io/gethomepage/homepage:latest
+    image: ghcr.io/gethomepage/homepage:0.9.6
     container_name: homepage
     ports:
       - 3002:3000
@@ -66,9 +66,10 @@ services:
     environment:
      - PUID=1000
      - PGID=1000
-     - APP_KEY=base64:FT01SCAdP4VephJU8ZmM9BT/Z1Xzh46SUtOKlze6fKU= # How to generate an app key: https://speedtest-tracker.dev/
+     - APP_DEBUG=true
+     - APP_KEY=base64:4Itl3CT8DzilBJOT5NwMohdyQa0iAHEbLUzqGAJNDAs=
      - DB_CONNECTION=sqlite
-     - SPEEDTEST_SCHEDULE=0 4 * * * #https://crontab.guru/
+     - SPEEDTEST_SCHEDULE=0 4 * * *
     # - SPEEDTEST_SERVERS=
      - PRUNE_RESULTS_OLDER_THAN=1095
     # - CHART_DATETIME_FORMAT= #https://www.php.net/manual/en/datetime.format.php
@@ -77,7 +78,7 @@ services:
     volumes:
      - /opt/speedtest-tracker/config:/config
     # - /path/to-custom-ssl-keys:/config/keys
-    image: lscr.io/linuxserver/speedtest-tracker:0.20.6
+    image: lscr.io/linuxserver/speedtest-tracker:0.21.2
     restart: unless-stopped
     networks:
       - network
