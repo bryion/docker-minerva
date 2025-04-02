@@ -10,6 +10,8 @@
     cpu: true
     cputemp: true
     memory: true
+    units: metric
+- resources: 
     disk:
         - /
         - /media/drive2

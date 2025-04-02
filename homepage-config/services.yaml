@@ -2,24 +2,21 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/en/configs/services
 #
-- Home:
+- Minerva:
     - Home Assistant:
         icon: home-assistant
         href: https://hass.nlab.casa/
         ping: https://hass.nlab.casa/
-        siteMonitor: https://hass.nlab.casa/
         description: 8123
     - Jellyfin:
         icon: jellyfin
         href: https://jellyfin.nlab.casa/
         ping: https://jellyfin.nlab.casa/
-        siteMonitor: https://jellyfin.nlab.casa/
         description: 8096
     - Nextcloud:
         icon: nextcloud
         href: https://nextcloud.nlab.casa/login
         ping: https://nextcloud.nlab.casa/login
-        siteMonitor: https://nextcloud.nlab.casa/login
         description: 8484
 #    - Actual Budget:
 #        icon: actual
@@ -57,7 +54,7 @@
 #            env: 2
 #            key: 
     - What's up Docker?:
-        icon: wud-light
+        icon: whats-up-docker-light
         href: https://wud.nlab.casa/
         ping: https://wud.nlab.casa/
         description: 3535
