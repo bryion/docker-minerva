@@ -1,4 +1,17 @@
 services:
+  web:
+    image: itzg/rcon
+    environment:
+      RWA_USERNAME: admin
+      RWA_PASSWORD: admin
+      RWA_ADMIN: "TRUE"
+      # is referring to the hostname of 'mc' compose service below
+      RWA_RCON_HOST: mc
+      # needs to match the RCON_PASSWORD configured for the container
+      RWA_RCON_PASSWORD: "demo"
+    ports:
+      - "4326:4326"
+      - "4327:4327"
   mc:
     container_name: minecraft-server
     image: itzg/minecraft-server:latest
@@ -23,6 +36,7 @@ services:
       ENABLE_WHITELIST: "true"
       PAUSE_WHEN_EMPTY_SECONDS: "300"
       LOG_TIMESTAMP: "true"
+      RCON_PASSWORD: "demo"
     volumes:
       - "/opt/minecraft/data:/data"
     restart: on-failure
