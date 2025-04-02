@@ -58,8 +58,6 @@ services:
       - /dev/serial/ttyUSB0/:/dev/serial/ttyUSB0
     #devices:
     #  - /dev/serial/by-id/:/dev/serial/by-id
-    external_url: "https://hass.nlab.casa"
-    internal_url: "http://192.168.1.19:8123"
     restart: unless-stopped
     privileged: true
     network_mode: host #required for hass
