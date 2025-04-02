@@ -84,6 +84,18 @@
         href: https://router.nlab.casa/
         ping: https://router.nlab.casa/
         description: BE9300
+    - NGINX Proxy Manager:
+        icon: nginx-proxy-manager
+        href: https://nginx.nlab.casa/
+        ping: https://nginx.nlab.casa/
+        description: 81
+        # server: docker #setup in docker.yaml
+        # container: nginxproxymanager
+        widget:
+            type: npm
+            url: https://nginx.nlab.casa/
+            username: bnexcess@gmail.com
+            password: bnexcess
     - Pi-hole:
         icon: pi-hole
         href: https://pi.nlab.casa/admin/
@@ -98,18 +110,6 @@
             type: speedtest
             url: https://speedtest.nlab.casa/
             bitratePrecision: 0
-    - NGINX Proxy Manager:
-        icon: nginx-proxy-manager
-        href: https://nginx.nlab.casa/
-        ping: https://nginx.nlab.casa/
-        description: 81
-        # server: docker #setup in docker.yaml
-        # container: nginxproxymanager
-        widget:
-            type: npm
-            url: https://nginx.nlab.casa/
-            username: bnexcess@gmail.com
-            password: bnexcess
     - Uptime Kuma:
         icon: uptime-kuma
         href: https://uptime.nlab.casa/
