@@ -28,7 +28,7 @@ language: en
 layout:
     Minerva:
         style: row
-        columns: 6
+        columns: 3
         useEqualHeights: true
         header: false
     System:
@@ -38,8 +38,8 @@ layout:
         style: columns
         rows: 2
     Media: 
-        style: columns
-        rows: 2
+        style: row
+        columns: 4
 #    Metrics:
 #        style: row
 #        columns: 2
