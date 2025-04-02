@@ -25,11 +25,6 @@ language: en
 #  weatherapi: weatherapiapikey
 
 layout:
-    Metrics:
-        style: row
-        columns: 4
-        useEqualHeights: true
-        header: false
     Minerva:
         style: row
         columns: 3

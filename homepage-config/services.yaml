@@ -148,19 +148,19 @@
 
 
 # >>>>These are all integrated through Glances<<<<
-- Metrics: 
+#- Metrics: 
     #- System Information:
     #    widget: 
     #        type: glances
     #        url: http://192.168.1.19:61208
     #        metric: info
     #        chart: false
-    - CPU:
-        widget:
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: cpu
-            chart: false
+#    - CPU:
+#        widget:
+#            type: glances
+#            url: http://192.168.1.19:61208
+#            metric: cpu
+#            chart: false
 #    - Network Usage:
 #        widget:
 #            type: glances
@@ -168,12 +168,12 @@
 #            url: http://192.168.1.19:61208
 #            metric: network:enp2s0
 #            chart: true
-    - Memory:
-        widget: 
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: memory
-            chart: false
+#    - Memory:
+#        widget: 
+#            type: glances
+#            url: http://192.168.1.19:61208
+#            metric: memory
+#            chart: false
 #    - Top Processes:
 #        widget: 
 #            type: glances
@@ -200,15 +200,15 @@
 #            url: http://192.168.1.19:61208
 #            metric: disk:nvme1n1
 #            chart: true
-    - Drive 1:
-        widget:
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: fs:/
-            chart: false
-    - Drive 2:
-        widget:
-            type: glances
-            url: http://192.168.1.19:61208
-            metric: fs:/media/drive2
-            chart: false
+#    - Drive 1:
+#        widget:
+#            type: glances
+#            url: http://192.168.1.19:61208
+#            metric: fs:/
+#            chart: false
+#    - Drive 2:
+#        widget:
+#            type: glances
+#            url: http://192.168.1.19:61208
+#            metric: fs:/media/drive2
+#            chart: false
