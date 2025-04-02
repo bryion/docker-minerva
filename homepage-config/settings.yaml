@@ -4,7 +4,7 @@
 #
 
 title: Minerva
-headerStyle: boxed
+headerStyle: underlined
 statusStyle: dot
 showStats: true
 favicon: /images/icon_minerva.png
@@ -28,12 +28,16 @@ language: en
 layout:
     Minerva:
         style: row
-        columns: 7
+        columns: 6
         useEqualHeights: true
+        header: false
     System:
         style: columns
         rows: 2
     Network:
+        style: columns
+        rows: 2
+    Media: 
         style: columns
         rows: 2
 #    Metrics:
