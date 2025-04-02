@@ -12,6 +12,7 @@ services:
     ports:
       - "4326:4326"
       - "4327:4327"
+    restart: on-failure
   mc:
     container_name: minecraft-server
     image: itzg/minecraft-server:latest
