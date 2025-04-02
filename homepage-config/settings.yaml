@@ -29,6 +29,7 @@ layout:
     Minerva:
         style: row
         columns: 7
+        useEqualHeights: true
     System:
         style: columns
         rows: 2
