@@ -8,18 +8,18 @@
 - logo: 
     icon: /images/icon_minerva.png
 
-- resources:
-    cpu: true
-    cputemp: true
-    memory: true
-    units: metric
-- resources: 
-    disk:
-        - /
-        - /media/drive2
-    units: metric
+#- resources:
+#    cpu: true
+#    cputemp: true
+#    memory: true
+#    units: metric
+#- resources: 
+#    disk:
+#        - /
+#        - /media/drive2
+#    units: metric
 
-- datetime: false
+# - datetime: 
 
 - openmeteo:
 #    label: # optional

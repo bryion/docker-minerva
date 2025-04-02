@@ -27,7 +27,7 @@ language: en
 layout:
     Metrics:
         style: row
-        columns: 2
+        columns: 4
         useEqualHeights: true
         header: false
     Minerva:
