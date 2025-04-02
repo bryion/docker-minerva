@@ -148,18 +148,19 @@
 
 
 # >>>>These are all integrated through Glances<<<<
-#- Metrics: 
+- Metrics: 
     #- System Information:
     #    widget: 
     #        type: glances
     #        url: http://192.168.1.19:61208
     #        metric: info
     #        chart: false
-    #- CPU Usage:
-    #    widget:
-    #        type: glances
-    #        url: http://192.168.1.19:61208
-    #        metric: cpu
+    - CPU:
+        widget:
+            type: glances
+            url: https://glances.nlab.casa/
+            metric: cpu
+            chart: false
 #    - Network Usage:
 #        widget:
 #            type: glances
@@ -167,11 +168,12 @@
 #            url: http://192.168.1.19:61208
 #            metric: network:enp2s0
 #            chart: true
-    #- Memory Usage:
-    #    widget: 
-    #        type: glances
-    #        url: http://192.168.1.19:61208
-    #        metric: memory
+    - Memory:
+        widget: 
+            type: glances
+            url: https://glances.nlab.casa/
+            metric: memory
+            chart: false
 #    - Top Processes:
 #        widget: 
 #            type: glances
@@ -198,13 +200,13 @@
 #            url: http://192.168.1.19:61208
 #            metric: disk:nvme1n1
 #            chart: true
-    #- Disk Usage 1:
-    #    widget:
-    #        type: glances
-    #        url: http://192.168.1.19:61208
-    #        metric: fs:/
-    #- Disk Usage 2:
-    #    widget:
-    #        type: glances
-    #        url: http://192.168.1.19:61208
-    #        metric: fs:/media/drive2
+    - Drive 1:
+        widget:
+            type: glances
+            url: https://glances.nlab.casa/
+            metric: fs:/
+    - Drive 2:
+        widget:
+            type: glances
+            url: https://glances.nlab.casa/
+            metric: fs:/media/drive2

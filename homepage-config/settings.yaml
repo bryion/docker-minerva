@@ -4,11 +4,10 @@
 #
 
 title: Minerva
-headerStyle: underlined
+headerStyle: clean
 statusStyle: dot
 showStats: true
 favicon: /images/icon_minerva.png
-logo: /images/icon_minerva.png
 background: 
     image: /images/background_redgalaxy.png
     opacity: 0.2
@@ -26,6 +25,11 @@ language: en
 #  weatherapi: weatherapiapikey
 
 layout:
+    Metrics:
+        style: row
+        columns: 2
+        useEqualHeights: true
+        header: false
     Minerva:
         style: row
         columns: 3

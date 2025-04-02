@@ -5,6 +5,8 @@
 #- greeting:
 #    text_size: xl
 #    text: " Minerva  "
+- logo: 
+    icon: /images/icon_minerva.png
 
 - resources:
     cpu: true
@@ -17,12 +19,7 @@
         - /media/drive2
     units: metric
 
-- datetime:
-    text_size: xl
-    format:
-      dateStyle: long
-      timeStyle: short
-      hour12: true
+- datetime: false
 
 - openmeteo:
 #    label: # optional
