@@ -3,45 +3,41 @@
 # https://gethomepage.dev/en/configs/settings
 #
 
-headerStyle: boxed
-
 title: Minerva
-
-background: /images/background_redgalaxy.png
-backgroundOpacity: 0.2
-
-layout:
-    Home:
-        style: columns
-        rows: 1
-    System:
-        style: columns
-        rows: 1
-    Network:
-        style: columns
-        rows: 1
-    Metrics:
-        style: row
-        columns: 2
-        header: false
-#lock Metrics section to 2 columns at the bottom
-
-theme: dark
-color: neutral
-
+headerStyle: boxed
+statusStyle: dot
+showStats: true
 favicon: /images/icon_minerva.png
-
+logo: /images/icon_minerva.png
+background: 
+    image: /images/background_redgalaxy.png
+    opacity: 0.2
+theme: dark
+color: gray
 quicklaunch:
     searchDescriptions: true
     hideInternetSearch: true
     hideVisitURL: false
-
+target: _blank
+hideVersion: true
+language: en
 #providers:
 #  openweathermap: openweathermapapikey
 #  weatherapi: weatherapiapikey
 
-target: _blank
+layout:
+    Minerva:
+        style: row
+        columns: 7
+    System:
+        style: columns
+        rows: 2
+    Network:
+        style: columns
+        rows: 2
+#    Metrics:
+#        style: row
+#        columns: 2
+#        header: false
+#lock Metrics section to 2 columns at the bottom
 
-hideVersion: true
-
-language: en
