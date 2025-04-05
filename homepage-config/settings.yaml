@@ -25,23 +25,19 @@ language: en
 #  weatherapi: weatherapiapikey
 
 layout:
-    Minerva:
-        style: row
-        columns: 3
-        useEqualHeights: true
-        header: false
-    System:
-        style: columns
-        rows: 2
-    Network:
-        style: columns
-        rows: 2
-    Media: 
+    small-apps:
         style: row
         columns: 4
-#    Metrics:
-#        style: row
-#        columns: 2
-#        header: false
-#lock Metrics section to 2 columns at the bottom
+        useEqualHeights: true
+        header: false
+    grpA:
+        style: row
+        columns: 2
+        header: false
+        media:
+            style: row
+            columns: 2
+            header: false
+        wide:
+            header: false
 

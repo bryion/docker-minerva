@@ -22,23 +22,21 @@
 #    diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
 #    expanded: false # show the expanded view
 
-#- resources:
-#    cpu: true
-#    cputemp: true
-#    memory: true
-#    units: metric
-#- resources: 
-#    disk:
-#        - /
-#        - /media/drive2
-#    units: metric
+- resources:
+    cpu: true
+    cputemp: true
+    memory: true
+    units: metric
+    disk:
+        - /
+        - /media/drive2
 
 # - datetime: 
 
-- openmeteo:
+#- openmeteo:
 #    label: # optional
-    latitude: 37.3
-    longitude: -122.03
-    timezone: America/Los_Angeles # optional
-    units: imperial
-    cache: 5 # Time in minutes to cache API responses, to stay within limits
+#    latitude: 37.3
+#    longitude: -122.03
+#    timezone: America/Los_Angeles # optional
+#    units: imperial
+#    cache: 5 # Time in minutes to cache API responses, to stay within limits

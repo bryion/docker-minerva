@@ -1,5 +1,5 @@
 services:
-  web:
+  rcon-web-admin:
     container_name: rcon-web-admin
     image: itzg/rcon
     environment:
