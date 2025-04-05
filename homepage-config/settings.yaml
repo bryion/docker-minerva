@@ -28,11 +28,11 @@ language: en
 
 layout:
     main-apps:
-        style: column
+        style: row
         columns: 2
         header: false
     has-widget:
-        style: column
+        style: row
         columns: 1
         header: false
 
