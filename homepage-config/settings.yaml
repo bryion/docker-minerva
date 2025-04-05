@@ -5,7 +5,7 @@
 
 title: Minerva
 fullWidth: true
-headerStyle: boxedWidgets
+headerStyle: boxed
 statusStyle: dot
 favicon: /images/icon_minerva.png
 background: 
@@ -28,8 +28,8 @@ language: en
 
 layout:
     main-apps:
-        style: columns
-        row: 1
+        style: row
+        columns: 3
         header: false
     other-apps:
         style: row
