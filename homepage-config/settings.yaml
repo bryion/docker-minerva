@@ -5,7 +5,7 @@
 
 title: Minerva
 fullWidth: true
-headerStyle: boxed
+headerStyle: clean
 statusStyle: dot
 favicon: /images/icon_minerva.png
 background: 
