@@ -27,15 +27,13 @@ language: en
 #  weatherapi: weatherapiapikey
 
 
-style: row
-columns: 2
 layout:
     main-apps:
         style: row
-        columns: 2
+        columns: 3  
         header: false
     has-widget:
         style: row
-        columns: 1
+        columns: 2
         header: false
 
