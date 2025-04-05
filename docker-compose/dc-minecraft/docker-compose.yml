@@ -1,6 +1,22 @@
 services:
-  mc:
-    container_name: minecraft-server
+  rcon-web-admin:
+    container_name: rcon-web-admin
+    image: itzg/rcon
+    environment:
+      RWA_USERNAME: admin
+      RWA_PASSWORD: admin
+      RWA_ADMIN: "TRUE"
+      RWA_RCON_HOST: minecraft
+      # needs to match the RCON_PASSWORD configured for the container
+      RWA_RCON_PASSWORD: "demo"
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    restart: unless-stopped
+  minecraft:
+    profiles: ["minecraft"] #will not start with "docker-compose up" unless profile is specified
+    container_name: minecraft
+    hostname: minecraft
     image: itzg/minecraft-server:latest
     tty: true
     stdin_open: true

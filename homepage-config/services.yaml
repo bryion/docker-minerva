@@ -18,8 +18,6 @@
         href: https://nextcloud.nlab.casa/login
         ping: http://192.168.1.19:8484
         description: 8484
-
-- other-apps:
     - Portainer:
         icon: portainer
         href: https://portainer.nlab.casa/
