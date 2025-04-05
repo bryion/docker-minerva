@@ -33,6 +33,6 @@ layout:
         header: false
     has-widget:
         style: column
-        column: 1
+        columns: 1
         header: false
 
