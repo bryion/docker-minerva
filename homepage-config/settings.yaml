@@ -28,15 +28,15 @@ language: en
 
 layout:
     main-apps:
-        style: row
-        columns: 3
+        style: columns
+        row: 1
         header: false
     other-apps:
-        style: columns
+        style: row
         columns: 4
         header: false
     has-widget:
-        style: columns
+        style: row
         columns: 2
         header: false
 

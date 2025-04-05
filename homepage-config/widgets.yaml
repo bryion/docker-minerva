@@ -11,7 +11,7 @@
     url: http://192.168.1.19:61208/
 #    username: user # optional if auth enabled in Glances
 #    password: pass # optional if auth enabled in Glances
-    version: 4 # required only if running glances v4 or higher, defaults to 3
+#    version: 4 # required only if running glances v4 or higher, defaults to 3
     cpu: true # optional, enabled by default, disable by setting to false
     cputemp: true # disabled by default
     mem: true # optional, enabled by default, disable by setting to false
