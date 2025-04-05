@@ -84,7 +84,7 @@
             icon: radarr
             href: https://radarr.nlab.casa/
             ping: http://192.168.1.19:7878
-                description: 7878
+            description: 7878
         - Sonarr:
             icon: sonarr
             href: https://sonarr.nlab.casa/
