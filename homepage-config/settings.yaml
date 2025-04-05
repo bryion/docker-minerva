@@ -4,13 +4,15 @@
 #
 
 title: Minerva
-headerStyle: clean
+fullWidth: true
+headerStyle: boxedWidgets
 statusStyle: dot
-showStats: true
 favicon: /images/icon_minerva.png
 background: 
     image: /images/background_redgalaxy.png
-    opacity: 0.2
+    opacity: 20
+    brightness: 70
+cardBlur: sm
 theme: dark
 color: gray
 quicklaunch:
@@ -25,19 +27,16 @@ language: en
 #  weatherapi: weatherapiapikey
 
 layout:
-    small-apps:
+    main-apps:
         style: row
-        columns: 4
-        useEqualHeights: true
+        columns: 3
         header: false
-    grpA:
-        style: row
+    other-apps:
+        style: columns
+        columns: 4
+        header: false
+    has-widget:
+        style: columns
         columns: 2
         header: false
-        media:
-            style: row
-            columns: 2
-            header: false
-        wide:
-            header: false
 

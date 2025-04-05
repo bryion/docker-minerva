@@ -2,7 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/en/configs/services
 #
-- small-apps:
+- main-apps:
     - Home Assistant:
         icon: home-assistant
         href: https://hass.nlab.casa/
@@ -18,11 +18,8 @@
         href: https://nextcloud.nlab.casa/login
         ping: http://192.168.1.19:8484
         description: 8484
-    - Pterodactyl:
-        icon: pterodactyl
-        href: http://ptero.nlab.casa
-        ping: http://ptero.nlab.casa
-        description: WIP
+
+- other-apps:
     - Portainer:
         icon: portainer
         href: https://portainer.nlab.casa/
@@ -68,80 +65,82 @@
         href: https://pi.nlab.casa/admin/
         ping: http://192.168.1.19:86
         description: 86
-#    - Actual Budget:
-#        icon: actual
-#        href: https://actual.nlab.casa
-#        ping: https://actual.nlab.casa
+    - Prowlarr:
+        icon: prowlarr
+        href: https://prowlarr.nlab.casa/
+        ping: http://192.168.1.19:9696
+        description: 9696
+    - Radarr:
+        icon: radarr
+        href: https://radarr.nlab.casa/
+        ping: http://192.168.1.19:7878
+        description: 7878
+    - Sonarr:
+        icon: sonarr
+        href: https://sonarr.nlab.casa/
+        ping: http://192.168.1.19:8989
+        description: 8989
+    - SABnzbd:
+        icon: sabnzbd
+        href: https://sabnzbd.nlab.casa/
+        ping: http://192.168.1.19:8181
+        description: 8181   
 
-- grpA:
-    - media:
-        - Prowlarr:
-            icon: prowlarr
-            href: https://prowlarr.nlab.casa/
-            ping: http://192.168.1.19:9696
-            description: 9696
-        - Radarr:
-            icon: radarr
-            href: https://radarr.nlab.casa/
-            ping: http://192.168.1.19:7878
-            description: 7878
-        - Sonarr:
-            icon: sonarr
-            href: https://sonarr.nlab.casa/
-            ping: http://192.168.1.19:8989
-            description: 8989
-        - SABnzbd:
-            icon: sabnzbd
-            href: https://sabnzbd.nlab.casa/
-            ping: http://192.168.1.19:8181
-            description: 8181    
-    - wide:
-        - What's up Docker?:
-            icon: whats-up-docker-light
-            href: https://wud.nlab.casa/
-            ping: http://192.168.1.19:3535
-            description: 3535
-            widget:
-                type: whatsupdocker
-                url: https://wud.nlab.casa/
-        - Prometheus:
-            icon: prometheus
-            href: https://prometheus.nlab.casa/
-            ping: http://192.168.1.19:9090
-            description: 9090
-            widget:
-                type: prometheus
-                url: https://prometheus.nlab.casa/
-        - Speedtest Tracker:
-            icon: speedtest-tracker
-            href: https://speedtest.nlab.casa/
-            ping: http://192.168.1.19:8081
-            description: 8081
-            widget:
-                type: speedtest
-                url: https://speedtest.nlab.casa/
-                bitratePrecision: 0
-        - Uptime Kuma:
-            icon: uptime-kuma
-            href: https://uptime.nlab.casa/
-            ping: http://192.168.1.19:3001
-            description: 3001
-            widget:
-                type: uptimekuma
-                url: https://uptime.nlab.casa/
-                slug: docker
-        - NGINX Proxy Manager:
-            icon: nginx-proxy-manager
-            href: https://nginx.nlab.casa/
-            ping: http://192.168.1.19:81
-            description: 81
-            # server: docker #setup in docker.yaml
-            # container: nginxproxymanager
-            widget:
-                type: npm
-                url: https://nginx.nlab.casa/
-                username: bnexcess@gmail.com
-                password: bnexcess
+- has-widget:
+    - Minecraft:
+        icon: minecraft
+        href: https://rcon.nlab.casa
+        ping: http://192.168.1.19:4326
+        description: 4326
+        widget:
+            type: minecraft
+            url: udp://192.168.1.19:25565
+    - Uptime Kuma:
+        icon: uptime-kuma
+        href: https://uptime.nlab.casa/
+        ping: http://192.168.1.19:3001
+        description: 3001
+        widget:
+            type: uptimekuma
+            url: https://uptime.nlab.casa/
+            slug: docker
+    - What's up Docker?:
+        icon: whats-up-docker-light
+        href: https://wud.nlab.casa/
+        ping: http://192.168.1.19:3535
+        description: 3535
+        widget:
+            type: whatsupdocker
+            url: https://wud.nlab.casa/
+    - Speedtest Tracker:
+        icon: speedtest-tracker
+        href: https://speedtest.nlab.casa/
+        ping: http://192.168.1.19:8081
+        description: 8081
+        widget:
+            type: speedtest
+            url: https://speedtest.nlab.casa/
+            bitratePrecision: 0
+    - Prometheus:
+        icon: prometheus
+        href: https://prometheus.nlab.casa/
+        ping: http://192.168.1.19:9090
+        description: 9090
+        widget:
+            type: prometheus
+            url: https://prometheus.nlab.casa/
+    - NGINX Proxy Manager:
+        icon: nginx-proxy-manager
+        href: https://nginx.nlab.casa/
+        ping: http://192.168.1.19:81
+        description: 81
+        # server: docker #setup in docker.yaml
+        # container: nginxproxymanager
+        widget:
+            type: npm
+            url: https://nginx.nlab.casa/
+            username: bnexcess@gmail.com
+            password: bnexcess
 
 # >>>>These are all integrated through Glances<<<<
 #- Metrics: 

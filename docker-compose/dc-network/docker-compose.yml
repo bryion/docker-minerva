@@ -177,6 +177,21 @@ services:
     ports:
       - 8181:8080
     restart: unless-stopped
+  rcon-web-admin:
+    container_name: rcon-web-admin
+    image: itzg/rcon
+    environment:
+      RWA_USERNAME: admin
+      RWA_PASSWORD: admin
+      RWA_ADMIN: "TRUE"
+      # RWA_RCON_HOST: mc
+      # needs to match the RCON_PASSWORD configured for the container
+      RWA_RCON_PASSWORD: "demo"
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    restart: unless-stopped
+  
 
 #  adguardhome:
 #    image: adguard/adguardhome
