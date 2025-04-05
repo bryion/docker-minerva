@@ -28,8 +28,7 @@ language: en
 
 layout:
     main-apps:
-        style: column
-        columns: 3
+        threeColumns: true
         header: false
     has-widget:
         style: column

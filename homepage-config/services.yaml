@@ -6,17 +6,17 @@
     - Home Assistant:
         icon: home-assistant
         href: https://hass.nlab.casa/
-        ping: http://192.168.1.19:8123
+        #siteMonitor: http://192.168.1.19:8123
         description: 8123
     - Jellyfin:
         icon: jellyfin
         href: https://jellyfin.nlab.casa/
-        ping: http://192.168.1.19:8096
+        #siteMonitor: http://192.168.1.19:8096
         description: 8096
     - Nextcloud:
         icon: nextcloud
         href: https://nextcloud.nlab.casa/login
-        ping: http://192.168.1.19:8484
+        #siteMonitor: http://192.168.1.19:8484
         description: 8484
     - Portainer:
         icon: portainer

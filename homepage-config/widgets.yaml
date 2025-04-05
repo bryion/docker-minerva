@@ -5,8 +5,8 @@
 #- greeting:
 #    text_size: xl
 #    text: " Minerva  "
-- logo: 
-    icon: /images/icon_minerva.png
+#- logo: 
+#    icon: /images/icon_minerva.png
 #- glances:
 #    url: http://192.168.1.19:61208/
 #    username: user # optional if auth enabled in Glances
@@ -28,8 +28,6 @@
     memory: true
     uptime: true
     units: metric
-    
-- resources:
     disk:
         - /
         - /media/drive2
