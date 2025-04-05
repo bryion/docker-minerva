@@ -26,6 +26,9 @@ language: en
 #  openweathermap: openweathermapapikey
 #  weatherapi: weatherapiapikey
 
+
+style: row
+columns: 2
 layout:
     main-apps:
         style: row
