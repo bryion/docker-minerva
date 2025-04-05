@@ -28,10 +28,11 @@ language: en
 
 layout:
     main-apps:
-        threeColumns: true
+        style: column
+        columns: 2
         header: false
     has-widget:
         style: column
-        columns: 2
+        column: 1
         header: false
 
