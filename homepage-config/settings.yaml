@@ -30,10 +30,14 @@ language: en
 layout:
     main-apps:
         style: row
-        columns: 3  
+        columns: 3
+        header: false
+    other-apps:
+        style: row
+        columns: 4
         header: false
     has-widget:
         style: row
-        columns: 2
+        columns: 3
         header: false
 

@@ -18,10 +18,12 @@
         href: https://nextcloud.nlab.casa/login
         #siteMonitor: http://192.168.1.19:8484
         description: 8484
+
+- other-apps:
     - Portainer:
         icon: portainer
         href: https://portainer.nlab.casa/
-        ping: http://192.168.1.19:9000
+        #ping: http://192.168.1.19:9000
         description: 9000
 #        widget:
 #            type: portainer
@@ -31,64 +33,64 @@
     - Grafana: 
         icon: grafana
         href: https://grafana.nlab.casa/login
-        ping: http://192.168.1.19:3000
+        #ping: http://192.168.1.19:3000
         description: 3000
     - Glances:
         icon: glances
         href: https://glances.nlab.casa/
-        ping: http://192.168.1.19:61208
+        #ping: http://192.168.1.19:61208
         description: 61208
     - Router:
         icon: router
         href: https://router.nlab.casa/
-        ping: http://192.168.1.1
+        #ping: http://192.168.1.1
         description: BE9300
     - Dozzle: 
         icon: dozzle
         href: https://dozzle.nlab.casa/
-        ping: http://192.168.1.19:9999
+        #ping: http://192.168.1.19:9999
         description: 9999
     - File Browser: 
         icon: filebrowser
         href: https://file.nlab.casa/
-        ping: http://192.168.1.19:8383
+        #ping: http://192.168.1.19:8383
         description: 8383
     - cAdvisor: 
         icon: cadvisor
         href: https://cadvisor.nlab.casa/
-        ping: http://192.168.1.19:8080
+        #ping: http://192.168.1.19:8080
         description: 8080
     - Pi-hole:
         icon: pi-hole
         href: https://pi.nlab.casa/admin/
-        ping: http://192.168.1.19:86
+        #ping: http://192.168.1.19:86
         description: 86
+    - SABnzbd:
+        icon: sabnzbd
+        href: https://sabnzbd.nlab.casa/
+        #ping: http://192.168.1.19:8181
+        description: 8181   
     - Prowlarr:
         icon: prowlarr
         href: https://prowlarr.nlab.casa/
-        ping: http://192.168.1.19:9696
+        #ping: http://192.168.1.19:9696
         description: 9696
     - Radarr:
         icon: radarr
         href: https://radarr.nlab.casa/
-        ping: http://192.168.1.19:7878
+        #ping: http://192.168.1.19:7878
         description: 7878
     - Sonarr:
         icon: sonarr
         href: https://sonarr.nlab.casa/
-        ping: http://192.168.1.19:8989
+        #ping: http://192.168.1.19:8989
         description: 8989
-    - SABnzbd:
-        icon: sabnzbd
-        href: https://sabnzbd.nlab.casa/
-        ping: http://192.168.1.19:8181
-        description: 8181   
 
 - has-widget:
     - Minecraft:
         icon: minecraft
         href: http://192.168.1.19:4326
-        ping: http://192.168.1.19:4326
+        #ping: http://192.168.1.19:4326
         description: 4326
         widget:
             type: minecraft
@@ -96,33 +98,33 @@
     - Uptime Kuma:
         icon: uptime-kuma
         href: https://uptime.nlab.casa/
-        ping: http://192.168.1.19:3001
+        #ping: http://192.168.1.19:3001
         description: 3001
         widget:
             type: uptimekuma
             url: https://uptime.nlab.casa/
             slug: docker
-    - What's up Docker?:
-        icon: whats-up-docker-light
-        href: https://wud.nlab.casa/
-        ping: http://192.168.1.19:3535
-        description: 3535
-        widget:
-            type: whatsupdocker
-            url: https://wud.nlab.casa/
     - Speedtest Tracker:
         icon: speedtest-tracker
         href: https://speedtest.nlab.casa/
-        ping: http://192.168.1.19:8081
+        #ping: http://192.168.1.19:8081
         description: 8081
         widget:
             type: speedtest
             url: https://speedtest.nlab.casa/
             bitratePrecision: 0
+    - What's up Docker?:
+        icon: whats-up-docker-light
+        href: https://wud.nlab.casa/
+        #ping: http://192.168.1.19:3535
+        description: 3535
+        widget:
+            type: whatsupdocker
+            url: https://wud.nlab.casa/
     - Prometheus:
         icon: prometheus
         href: https://prometheus.nlab.casa/
-        ping: http://192.168.1.19:9090
+        #ping: http://192.168.1.19:9090
         description: 9090
         widget:
             type: prometheus
@@ -130,7 +132,7 @@
     - NGINX Proxy Manager:
         icon: nginx-proxy-manager
         href: https://nginx.nlab.casa/
-        ping: http://192.168.1.19:81
+        #ping: http://192.168.1.19:81
         description: 81
         # server: docker #setup in docker.yaml
         # container: nginxproxymanager
