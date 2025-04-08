@@ -35,7 +35,7 @@ services:
       PVP: "false"
       SIMULATION_DISTANCE: "16"
       VIEW_DISTANCE: "16"
-      LEVEL: "4-2-25"
+      LEVEL: "4-8-25_modded"
       ENABLE_WHITELIST: "true"
       PAUSE_WHEN_EMPTY_SECONDS: "300"
       LOG_TIMESTAMP: "true"
