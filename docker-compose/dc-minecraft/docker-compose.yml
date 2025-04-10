@@ -41,13 +41,14 @@ services:
       RCON_CMDS_STARTUP:  |-
         gamerule playersSleepingPercentage 1
         gamerule randomTickSpeed 10
+        gamerule mobGriefing false
       PAUSE_WHEN_EMPTY_SECONDS: "300"
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAMP: "true"
       RCON_PASSWORD: "demo" #change this
       TYPE: "FABRIC"
       VERSION: "1.21.5"
-      MEMORY: "16384M"
+      MEMORY: "20480M"
       USE_AIKAR_FLAGS: true
     volumes:
       - "/opt/minecraft/data:/data"
