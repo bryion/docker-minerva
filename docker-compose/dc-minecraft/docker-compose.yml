@@ -13,7 +13,7 @@ services:
       - "4326:4326"
       - "4327:4327"
     restart: unless-stopped
-  minecraft:
+  minecraft: # !!! Docker Compose generator https://setupmc.com/java-server/
     profiles: ["minecraft"] #will not start with "docker-compose up" unless profile is specified
     container_name: minecraft
     hostname: minecraft
@@ -23,23 +23,32 @@ services:
     ports:
       - "25565:25565"
     environment:
+      TZ: "America/Los_Angeles"
       EULA: "TRUE"
-      TYPE: "FABRIC"
-      VERSION: "1.21.5"
-      MEMORY: "16384M"
-      MAX_PLAYERS: "10"
       MOTD: "...and we're live."
       ICON: "minecraft-config/icon_minerva_64.png"
-      TZ: "America/Los_Angeles"
-      DIFFICULTY: "2"
+      LEVEL: "4-8-25_modded"
+      MAX_PLAYERS: "10"
+      DIFFICULTY: "3"
       PVP: "false"
       SIMULATION_DISTANCE: "12"
       VIEW_DISTANCE: "12"
-      LEVEL: "4-8-25_modded"
       ENABLE_WHITELIST: "true"
+      WHITELIST: |
+        BryTheGuy
+      OPS: |
+        BryTheGuy
+      RCON_CMDS_STARTUP:  |-
+        gamerule playersSleepingPercentage 1
+        gamerule randomTickSpeed 10
       PAUSE_WHEN_EMPTY_SECONDS: "300"
+      ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAMP: "true"
       RCON_PASSWORD: "demo" #change this
+      TYPE: "FABRIC"
+      VERSION: "1.21.5"
+      MEMORY: "16384M"
+      USE_AIKAR_FLAGS: true
     volumes:
       - "/opt/minecraft/data:/data"
     restart: on-failure
