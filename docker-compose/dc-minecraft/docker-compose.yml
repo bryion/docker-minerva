@@ -30,7 +30,7 @@ services:
       LEVEL: "4-8-25_modded"
       MAX_PLAYERS: "10"
       DIFFICULTY: "3"
-      PVP: "false"
+      PVP: "true"
       SIMULATION_DISTANCE: "12"
       VIEW_DISTANCE: "12"
       ENABLE_WHITELIST: "true"
@@ -40,8 +40,8 @@ services:
         BryTheGuy
       RCON_CMDS_STARTUP:  |-
         gamerule playersSleepingPercentage 1
-        gamerule randomTickSpeed 10
-        gamerule mobGriefing false
+        gamerule randomTickSpeed 3
+        gamerule mobGriefing true
       PAUSE_WHEN_EMPTY_SECONDS: "300"
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAMP: "true"
