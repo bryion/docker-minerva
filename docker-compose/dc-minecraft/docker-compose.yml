@@ -1,22 +1,23 @@
 services:
-  rcon-web-admin:
-    container_name: rcon-web-admin
+  mc-rcon-web-admin:
+    container_name: mc-rcon-web-admin
     image: itzg/rcon
     environment:
       RWA_USERNAME: admin
       RWA_PASSWORD: admin
       RWA_ADMIN: "TRUE"
-      RWA_RCON_HOST: minecraft
+      RWA_RCON_HOST: mc-server
       # needs to match the RCON_PASSWORD configured for the container
       RWA_RCON_PASSWORD: "demo" #change this
     ports:
       - "4326:4326"
       - "4327:4327"
     restart: unless-stopped
-  minecraft: # !!! Docker Compose generator https://setupmc.com/java-server/
-    profiles: ["minecraft"] #will not start with "docker-compose up" unless profile is specified
-    container_name: minecraft
-    hostname: minecraft
+  
+  mc-server: # !!! Docker Compose generator https://setupmc.com/java-server/
+    profiles: ["server"] #will not start with "docker-compose up" unless profile is specified
+    container_name: mc-server
+    hostname: mc-server
     image: itzg/minecraft-server:latest
     tty: true
     stdin_open: true
@@ -40,8 +41,6 @@ services:
         BryTheGuy
       RCON_CMDS_STARTUP:  |-
         gamerule playersSleepingPercentage 1
-        gamerule randomTickSpeed 3
-        gamerule mobGriefing true
       PAUSE_WHEN_EMPTY_SECONDS: "300"
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAMP: "true"
@@ -53,3 +52,12 @@ services:
     volumes:
       - "/opt/minecraft/data:/data"
     restart: on-failure
+
+  mc-monitor:
+    image: itzg/mc-monitor
+    command: export-for-prometheus
+    environment:
+      EXPORT_SERVERS: mc-server
+      DEBUG: "true"
+    depends_on:
+      - mc-server
