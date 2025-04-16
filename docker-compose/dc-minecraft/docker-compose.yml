@@ -54,6 +54,7 @@ services:
     restart: on-failure
 
   mc-monitor:
+    container_name: mc-monitor
     image: itzg/mc-monitor
     command: export-for-prometheus
     environment:
