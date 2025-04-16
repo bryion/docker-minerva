@@ -25,4 +25,4 @@ scrape_configs:
   - job_name: 'fabric'
     scrape_interval: 30s
     static_configs:
-    - targets: ['192.168.1.19:25585']
+    - targets: ['mc-server:25585']
