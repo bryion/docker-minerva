@@ -53,7 +53,7 @@ services:
       - "/opt/minecraft/data:/data"
     restart: on-failure
 
-  mc-monitor:
+  mc-monitor: #default port 8080
     container_name: mc-monitor
     image: itzg/mc-monitor
     command: export-for-prometheus

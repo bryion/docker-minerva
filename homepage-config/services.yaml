@@ -58,8 +58,8 @@
     - cAdvisor: 
         icon: cadvisor
         href: https://cadvisor.nlab.casa/
-        #ping: http://192.168.1.19:8080
-        description: 8080
+        #ping: http://192.168.1.19:8082
+        description: 8082
     - Pi-hole:
         icon: pi-hole
         href: https://pi.nlab.casa/admin/
