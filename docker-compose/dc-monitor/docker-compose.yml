@@ -94,6 +94,71 @@ services:
     environment:
       - "GLANCES_OPT=-w"
 
+# MINECRAFT STACK
+  mc-rcon-web-admin:
+    container_name: mc-rcon-web-admin
+    image: itzg/rcon
+    environment:
+      RWA_USERNAME: admin
+      RWA_PASSWORD: admin
+      RWA_ADMIN: "TRUE"
+      RWA_RCON_HOST: mc-server
+      # needs to match the RCON_PASSWORD configured for the container
+      RWA_RCON_PASSWORD: "demo" #change this
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    restart: unless-stopped
+  
+  mc-server: # !!! Docker Compose generator https://setupmc.com/java-server/
+    profiles: ["server"] #will not start with "docker-compose up" unless profile is specified
+    container_name: mc-server
+    hostname: mc-server
+    image: itzg/minecraft-server:latest
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      TZ: "America/Los_Angeles"
+      EULA: "TRUE"
+      MOTD: "...and we're live."
+      ICON: "minecraft-config/icon_minerva_64.png"
+      LEVEL: "4-8-25_modded"
+      MAX_PLAYERS: "10"
+      DIFFICULTY: "3"
+      PVP: "true"
+      SIMULATION_DISTANCE: "12"
+      VIEW_DISTANCE: "12"
+      ENABLE_WHITELIST: "true"
+      WHITELIST: |
+        BryTheGuy
+      OPS: |
+        BryTheGuy
+      RCON_CMDS_STARTUP:  |-
+        gamerule playersSleepingPercentage 1
+      PAUSE_WHEN_EMPTY_SECONDS: "300"
+      ENABLE_ROLLING_LOGS: "true"
+      LOG_TIMESTAMP: "true"
+      RCON_PASSWORD: "demo" #change this
+      TYPE: "FABRIC"
+      VERSION: "1.21.5"
+      MEMORY: "20480M"
+      USE_AIKAR_FLAGS: true
+    volumes:
+      - "/opt/minecraft/data:/data"
+    restart: on-failure
+
+  mc-monitor: #default port 8080
+    container_name: mc-monitor
+    image: itzg/mc-monitor
+    command: export-for-prometheus
+    environment:
+      EXPORT_SERVERS: mc-server
+      DEBUG: "true"
+    depends_on:
+      - mc-server
+
 networks:
   network:
     name: minerva_network
