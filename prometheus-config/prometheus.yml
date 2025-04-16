@@ -20,4 +20,4 @@ scrape_configs:
   - job_name: 'mc-monitor'
     scrape_interval: 30s
     static_configs:
-      - targets: ['monitor:8080']
+      - targets: ['mc-monitor:8080']
