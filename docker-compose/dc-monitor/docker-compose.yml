@@ -109,7 +109,7 @@ services:
       - "4326:4326"
       - "4327:4327"
     restart: unless-stopped
-  
+
   mc-server: # !!! Docker Compose generator https://setupmc.com/java-server/
     profiles: ["server"] #will not start with "docker-compose up" unless profile is specified
     container_name: mc-server
@@ -156,6 +156,7 @@ services:
     environment:
       EXPORT_SERVERS: mc-server
       DEBUG: "true"
+    restart: on-failure
     depends_on:
       - mc-server
 
