@@ -28,7 +28,7 @@ services:
       EULA: "TRUE"
       MOTD: "...and we're live."
       ICON: "minecraft-config/icon_minerva_64.png"
-      LEVEL: "4-8-25_modded"
+      LEVEL: "gooner25"
       MAX_PLAYERS: "10"
       DIFFICULTY: "3"
       PVP: "true"
