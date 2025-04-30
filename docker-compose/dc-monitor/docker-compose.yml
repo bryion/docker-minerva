@@ -111,7 +111,7 @@ services:
     restart: unless-stopped
 
   mc-server: # !!! Docker Compose generator https://setupmc.com/java-server/
-    profiles: ["server"] #will not start with "docker-compose up" unless profile is specified
+    profiles: ["server"] #will not start with "docker-compose up" unless profile is specified: sudo docker compose --profile server up -d
     container_name: mc-server
     hostname: mc-server
     image: itzg/minecraft-server:latest
