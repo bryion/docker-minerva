@@ -55,6 +55,7 @@ services:
     command:
       - '-housekeeping_interval=10s' #cutting cpu usage
       - '-docker_only=true'
+    restart: unless-stopped
     privileged: true
 
   uptime-kuma:
