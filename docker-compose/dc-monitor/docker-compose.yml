@@ -144,7 +144,7 @@ services:
       RCON_PASSWORD: "demo" #change this
       TYPE: "FABRIC"
       VERSION: "1.21.5"
-      MEMORY: "20480M"
+      MEMORY: "32768M"
       USE_AIKAR_FLAGS: true
     volumes:
       - "/opt/minecraft/data:/data"
